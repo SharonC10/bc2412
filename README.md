@@ -1,6 +1,6 @@
 # welcoome to the bootcamp!
 
-## sub0heading 
+## sub-heading 
 ### heading 3
 - Chapter 1
   - 1.1
