@@ -8,3 +8,10 @@
 - Chapter 2 
   - 2.1
   - 2.2
+# git add .
+# git commit -m "20241210"
+# git push
+- Chapter 3
+  - 3.1
+  - 3.2
+  
