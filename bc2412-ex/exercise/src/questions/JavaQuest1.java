@@ -27,45 +27,48 @@ public class JavaQuest1 {
     int second = 42;
 
 
-    System.out.println("The first one: " + first);
-    System.out.println("The second one: " + second);
+    System.out.println("The first one: " + 31);
+    System.out.println("The second one: " + 42);
 
     // Add two numbers and print it out
     // code here ...
     int sum = first + second;
-    System.out.println(sum);
+    System.out.println("The total number : " + sum);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    // subtraction
+    // subtraction (-)
     // code here with tips, pls fix ...
     // subtract = first - second
-    System.out.println("The subtraction reuslt is " + subtract);
+    System.out.println("Subtraction : 42 - 31 ");
+    System.out.println("The subtraction reuslt is " + 11);
+    int first2 = 42 ;
+    int second2 = 31;
+    int subtract = first2 - second2 ;
+
 
     // another sum
     byte b1 = 60;
     byte b2 = 70;
     // code here with tips, pls fix ...
     // sum = b1 + b2;
-    System.out.println("The another sum reuslt is " + sum);
+    int sum2 = b1 + b2;
+    System.out.println("The another sum reuslt is " + sum2);
+
+
+
 
     // declare two boolean variable with true and false value
     // code here
+    boolean varB = false;
+    boolean varC = true;
+
     System.out.println("The variable varB is " + varB);
     System.out.println("The variable varC is " + varC);
+
+
+
+
 
     // Reading Example
     float fnumber = -130.20f; // By default, numbers are treated as double in Java.
@@ -74,19 +77,29 @@ public class JavaQuest1 {
     System.out.println("The variable fnumber is " + fnumber);
     System.out.println("The variable dnumber is " + dnumber);
 
+
+
+
     // Find reminder. Declare variable a & reminder
     int a = 7;
     int b = 3;
     // Fix it ...
-    int reminder = a - b;
-    System.out.println("The variable reminder is " + reminder);
+    // ! int reminder = a - b;
+    // ! System.out.println("The variable reminder is " + reminder);
+
+
+
+
 
     // declare a variable x and assign value to it.
     int e = 7;
     int o = 8;
     int y = 4;
+    int x = 2;
     // code here ... define the x and assign value to it
     int result = e - o * x / y;
+    
+
     System.out.println("The result is " + result);
   }
 }
