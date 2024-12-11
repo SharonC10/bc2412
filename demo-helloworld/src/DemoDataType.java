@@ -29,19 +29,22 @@ public class DemoDataType {
     x = x * 3; // 71 * 3 = 213
     x = x / 213; // 213/213
 
-    // print out  (ln: small L)
+    // print out  (ln: small L) ---Q1
     System.out.println(x); // 1
+
+
+
     x = x + 8 * 2 / 4 + 1; 
     // 8 * 2 
     // 16 / 4 -> 4 + 1 + x (1)
     //6
-    System.out.println(x);
+    System.out.println(x); //-------Q2 (6)
 
-    x = (x + 2) * 2 / (3 + 1); //4
+    x = (x + 2) * 2 / (3 + 1); //4-------Q3
     System.out.println(x);
 
     x = ((x + 3)/ ( 6 + 1)) * (x + 1);
-    System.out.println(x);
+    System.out.println(x);//----------Q4
 
     // divide
     int x2 = 3 / 2;
@@ -55,14 +58,14 @@ public class DemoDataType {
     // Step 2: int value / int calue -> int value
     // Step 3: 3 /2 -> 1
     // Step 4: assign 1 (int value) to double type variable (convert 1 to 1.0)
-    System.out.println(x3); // 1.0
+    System.out.println(x3); // 1.0----------Q5
 
     double x4 = 3.0 / 2;
     // Step 1: 3.0 -> double value, 2 -> int value 
     // Step 2: double value / int calue -> double value
     // Step 3: 3.0 /2 -> 1.5
     // Step 4: assign 1.5 (double value) to dounle type variable 
-    System.out.println(x4); // 1.5
+    System.out.println(x4); // 1.5---------Q6
 
 
     //int f = 10 / 0;
@@ -70,12 +73,12 @@ public class DemoDataType {
     // System connot run! even after this have anothe form below
 
     // 0 /10
-    System.out.println(0 / 10);//0
+    System.out.println(0 / 10);//0---------Q7
 
 
     //Same as below: int / double = double value
     double x5 = 3 / 2.0;
-    System.out.println(x5);
+    System.out.println(x5);//----------Q8
 
     // divide by 0
     
@@ -87,7 +90,11 @@ public class DemoDataType {
     // Step 4: assign 1.5 (double value) to int type variable(downcasting)
     // ! Not allow assign a higher level value to lower value type of variable 
     
-    // int -> doyble (upcast)
+    double x6 = 3.0 / 2;
+    System.out.println(x6);//-----------Q9 (1.5)
+
+
+    // int -> double (upcast)
     // double -> int (downcast)
 
     // ! Store Integer. Java: int, byte, short, long
@@ -115,10 +122,16 @@ public class DemoDataType {
     // most of the situation can use 
     // how about 2_147_483_648?
     // long l1 = 2_147_483_648;
-
+    
     // ! long 
     //2_147_483_648 -> int value
     // int value -> double type variable 
+    long l3 = 100;
+    System.out.println(l3);//---------Q10
+    long l4 = 2147483647;
+    System.out.println(l4); // ------------_Q11
+    long l5 = 10000000000L; 
+
 
 
 
@@ -128,6 +141,10 @@ public class DemoDataType {
     // !declare a hardcode long value, you should always add "L"
     // Step 1: declare an int value (Not OK)
     long l2 = 2_147_483_648L; // "L" -> declare it is a long value 
+
+
+
+
 
 
     // double vs float 
@@ -185,6 +202,12 @@ public class DemoDataType {
     int age2 = 18;
     boolean isAdult = age2 >= 18;
     System.out.println(isAdult); // ture
+
+
+
+
+
+    
 
 
   }
