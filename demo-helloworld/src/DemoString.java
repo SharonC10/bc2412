@@ -70,7 +70,30 @@ public class DemoString {
 
     
 
-    
+    // (Problems): print the last character of string 
+    String password2 = "helloworld";
+    char lastChar = password2.charAt( password2.length() - 1 );
+    System.out.println(lastChar);
+
+
+    // Empty Spring
+    String emptyString = "";
+    char lastChar2 = emptyString.charAt(emptyString.length());
+
+    System.out.println(emptyString); //0
+    boolean isStringEmpty = "".equals(emptyString);// asking if emptyString equals to ""
+    System.out.println(isStringEmpty);//true
+
+
+String s = "hello";
+System.out.println("hello".equals(s));// true, asking if s equals to "hello
+
+System.out.println("hello".charAt(2)) ;//l
+
+
+
+// 'c'.charAt() // primituce has no method (tool)
+
 
 
 
