@@ -7,88 +7,123 @@ public class DemoString {
     x = 'x'; // <- re-assignment 
     // char x = 'o';
 
-    // ! define a String calue by double quote"
-    // ! define a char calue by single quote"
-    // char x = 'abcd1234' No!!
+    // 1. String
+    // ! define a String value by double quote ""
+    // ! define a char value by single quote ''
+    // !!char x = 'abcd1234' No!! only single word in char.
     String password = "abcd1234";
     String emailAdress = "abc@gmail.com";
+
     
-    // 1. charAt 
-    // String only can push
+    // String only can +
     // + operarion
     password = password + "!";
-    System.out.println("helloworld");
+    System.out.println("helloworld");//show "helloworld"
     System.out.println(password); // abcd1234!
+
+    //test 
+    System.out.println("Hi i'm Sharon.");
+    // Hi i'm Sharon.
+    password = password + "!!";
+    System.out.println(password);
+    // abcd1234!!!-------Q4
+
+
+
 
     //Java Method (Instance method)
     // action /tools ( the 8 pr ) String is tools
     //password.charAt(0); //all the intex start from '0' 
 
-    // 1. charAt 
+    // 2. charAt 
     // charAt -> put int calue inside () 
-    char result = password.charAt(0);// 0 represents the first position of the String value
-    System.out.println(result);//a
+    char result = password.charAt(0);
+    // 0 represents the first position of the String value
+    System.out.println(result);//a----------Q5
+
+    //test 
+    //String result2 = password.charAt(3);
+    // !! charAt only can use char to present
+    char result10 = password.charAt(5);
+    System.out.println(password);//--------Q6 it only show password
+    System.out.println(result10);//--------Q7 //2
+
 
     // ! index start from '0' to length -1 
     // (abcd1234! -> length is 123456789 means 9-1 =8 -> charAt length should be 012345678)
-    System.out.println(password.charAt(8));//!
+    System.out.println(password.charAt(8));//!------Q8
     // System.out.println(password.charAt(-1)); //error! cannot over password range
     // System.out.println(password.charAt(9)); //error! cannot over password range
 
-
+    // Problem: print the last character of string.
+    String password2 = "helloworld";
+    char lastChar = password2.charAt(password2.length() - 1);
+    System.out.println(lastChar); // d-----------Q9
 
 
     // 2. equals
-    // very importment, 
+    // very importment, true/ false
     String s1 = "abc" ;
     String s2 = "abc" ; 
     boolean result2 = s1.equals(s2);
-    System.out.println(result2);//true
+    System.out.println(result2);//true--------Q10
 
+
+    //test
     String h1 = "girl";
     String h2 = "boy";
     boolean result3 = h1.equals(h2);
-    System.out.println(result3);//false
+    System.out.println(result3);//false-----------Q11
 
     //Vincent 
-    // String s3 = "abc";
-    // String s4 = "def";
-    // boolean result3 = s3.eqals(s4);
-    // System.out.println(result3);
+     String s3 = "abc";
+     String s4 = "def";
+     boolean result5 = s3.equals(s4);
+     System.out.println(result5);//false --------Q12
 
 
 
 
 
     // 3. length()
-    int result4 = password.length();
-    System.out.println(result4);// should be 9, the length 
+    int result4 = password.length();// check password length
+    System.out.println(result4);// should be 11, the length 
     
-    //String password2 = "0000000000";
-    //int result4 = password2.length();
-    //System.out.println(result4);
+    //test
+    String password3 = "0000000000";
+    int result6 = password3.length();
+    System.out.println(result6);//10 ---------Q14
+
+    char result7 = password3.charAt(5);
+    System.out.println(result7);//0------Q15
+
 
     
 
-    // (Problems): print the last character of string 
-    String password2 = "helloworld";
-    char lastChar = password2.charAt( password2.length() - 1 );
-    System.out.println(lastChar);
+    
 
 
     // Empty Spring
     String emptyString = "";
-    char lastChar2 = emptyString.charAt(emptyString.length());
-
-    System.out.println(emptyString); //0
-    boolean isStringEmpty = "".equals(emptyString);// asking if emptyString equals to ""
+    System.out.println(emptyString.length());//0-------Q16
+    boolean isStringEmpty = "".equals(emptyString);
+    // asking if emptyString equals to ""
+    // right to the left!
     System.out.println(isStringEmpty);//true
 
 
 String s = "hello";
-System.out.println("hello".equals(s));// true, asking if s equals to "hello
+System.out.println("hello".equals(s));
+// true, asking if s equals to "hello
 
 System.out.println("hello".charAt(2)) ;//l
+
+//test 
+String cat = "Neco";
+System.out.println("Neco".equals(cat));
+// it will show true or false
+
+System.out.println("Neco".charAt(3));
 
 
 
