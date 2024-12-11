@@ -1,20 +1,25 @@
 public class DemoDataType {
   public static void main (String[]args){
     // Comment. Welcome to bootcamp! Notes here!
-    // ! 1. Data Type ( 8 Primitive)
+    // ! 1. Data Type ( 8 Primitives)
+
+
     // int -> Integer
     int x = 3; // from right to left.
     int dayOfWeek = 7;
-    // int y = 3.2; // ! nok OK, y is a variable that can store integer only.
+    // int y = 3.2; // ! not OK, y is a variable that can store integer only.
 
     double y2 = 3.2;
-    // double 2w = 10.0 // ! not OK
-
-    // variable Java naming convension
+    // example .
+    // double 2w = 10.0 
+    // ! not OK
     // caml case : dayOfWeek, y2(cannot start from number)
 
+    // variable Java naming convension
+    
+
     // Re-assignment 
-    //we cannot use the declared twice
+    //we cannot use the declared the name twice
     //Step 1. declaration
     // Step 2. value assignment 
     // but only can declare the name once, not twice
