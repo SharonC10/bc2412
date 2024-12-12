@@ -103,7 +103,7 @@ public class DemoString {
     
 
 
-    // Empty Spring
+    // Empty String
     String emptyString = "";
     System.out.println(emptyString.length());//0-------Q16
     boolean isStringEmpty = "".equals(emptyString);
@@ -129,8 +129,36 @@ System.out.println("Neco".charAt(3));
 
 // 'c'.charAt() // primituce has no method (tool)
 
+    //isEmpty
+    String s5 = "abc";
+    // check if s5 is empty?
+    boolean isEmpty = s5.length() == 0;
+    System.out.println(isEmpty); // false 
+    System.out.println(s5.isEmpty());// false  22?
+
+    String ua = " ";
+    boolean isEmpty2 = ua.length() == 0;
+    System.out.println(isEmpty2) ; // or 
+    System.out.println(s5.isEmpty());
 
 
+    //!! substring
+    // s5 = abc
+    //s5.substring(x, x);
+    String substr = s5.substring(0, 2);
+    //! s5's value doesn't change 
+    //! substr is storing a new String value returned by "substring"
+    System.out.println(substr); // ab
+    System.out.println(s5.substring(0,3)); //abc
+    System.out.println(s5.substring(0,s5.length())); // abc
+    System.out.println(s5.substring(1,s5.length())); //bc
+    System.out.println(s5.substring(1)); //bc 
+    // using substring -> want to cut out smth.
+    
+
+
+
+    String l10 = "hello";
 
   }
 }

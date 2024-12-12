@@ -1,23 +1,49 @@
 public class Demoif {
   public static void main(String[] args) {
 
+
     // if -> check event -> event result
+    //int
     int x = 3;
-    if (x > 2) {// "x>2" is an event
-      System.out.println("x > 2.");
-    }
+    if (x > 2) {// "x>2" is an event -> true / false 
+      System.out.println("x is > 2.");
+    }//x is > 2. --------Q1
+
+    //Test 
+    int hight = 171;
+    if (hight >180 ){
+      System.out.println("hight is > 180.");
+    }// do not show, as it is false.
 
 
 
+
+
+    //length
     String s = "hello";
-    // check if lenght >3
+    // i wanna check if lenght >3??
     if (s.length() > 3) {
       System.out.println(" s lenght > 3.");
       // if s lenght > 3 --> show "s lenght > 3. "
-    }
+    }// s lenght >3. -----Q2
+
+    //test 
+    String email = "1234a@gmail.com";
+    if (email.length() > 10){
+      System.out.print("email length > 10");
+    }//email length > 10 -------Q3
+
+
+
 
 
     // equals, charAt
+    // Vincent
+    if ("hello".equals(s)){
+      System.out.println("s equals to hello");
+    }
+
+    //test
     String d = "dog";
     String c = "cat";
     if (d.equals(c)) {
@@ -29,6 +55,20 @@ public class Demoif {
     if (name.equals(name2)) {
       System.out.println("Mary is May");
     }
+
+    int meme = 28;
+    int lulu = 28;
+    if (meme.equals(28)){
+      System.out.println("meme is lulu.");
+    }
+
+
+
+
+
+
+
+
 
 
     // == , >=
