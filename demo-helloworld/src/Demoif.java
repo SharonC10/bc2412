@@ -56,11 +56,11 @@ public class Demoif {
       System.out.println("Mary is May");
     }
 
-    int meme = 28;
-    int lulu = 28;
-    if (meme.equals(28)){
-      System.out.println("meme is lulu.");
-    }
+    //int meme = 28;
+    //int lulu = 28;
+    //if (meme.equals(28)){
+      //System.out.println("meme is lulu.");
+    //}
 
 
 
