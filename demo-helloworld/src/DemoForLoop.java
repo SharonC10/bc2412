@@ -102,7 +102,7 @@ public class DemoForLoop {
       // }
 
       int sum = 0;
-      for (int c = 0; c <= 20; c++) {
+      for (int c = 0; c <= 5; c++) {
         sum = sum + c;
       }
       System.out.println(sum);// 210
@@ -140,7 +140,7 @@ public class DemoForLoop {
       for (int h = 0; h < 11; h++) {
         if (h % 2 == 1) {
           sum += h;
-
+          System.out.println(h);
         }
       }
       System.out.println(sum); // 25------------

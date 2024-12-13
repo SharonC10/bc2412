@@ -35,20 +35,20 @@ public class DemoScanner {
     // total hours  5* 24hours for day
     // 24,48,72....
 
-    //int totalHours = 0;
-    //for (int i = 0 ; i < day ; i++){
-      //totalHOURS += 24;
-    //}
-      //System.out.println(totalHours);
-    
-
-    int totalMinutes = 0;
-    for (int d = 0; d < day; d++){
-      for(int j = 0 ; j < hours ; j++){
-
-      }
-    
+    int totalHours = 0;
+    for (int i = 0 ; i <= 5 ; i++){
+      totalHours += i;
     }
+      System.out.println(totalHours);
+    
+
+    //int totalMinutes = 0;
+    //for (int d = 0; d < day; d++){
+      //for(int j = 0 ; j < hours ; j++){
+
+      //}
+    
+    //}
 
 
 
