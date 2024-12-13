@@ -18,11 +18,11 @@ public class DemoString {
     // String only can +
     // + operarion
     password = password + "!";
-    System.out.println("helloworld");//show "helloworld"
-    System.out.println(password); // abcd1234!
+    System.out.println("helloworld");//show "helloworld"---------1
+    System.out.println(password); // abcd1234!---------2
 
     //test 
-    System.out.println("Hi i'm Sharon.");
+    System.out.println("Hi i'm Sharon.");//----------3
     // Hi i'm Sharon.
     password = password + "!!";
     System.out.println(password);
@@ -40,6 +40,7 @@ public class DemoString {
     char result = password.charAt(0);
     // 0 represents the first position of the String value
     System.out.println(result);//a----------Q5
+    //String password = "abcd1234";
 
     //test 
     //String result2 = password.charAt(3);
@@ -109,12 +110,12 @@ public class DemoString {
     boolean isStringEmpty = "".equals(emptyString);
     // asking if emptyString equals to ""
     // right to the left!
-    System.out.println(isStringEmpty);//true
+    System.out.println(isStringEmpty);//true---------17
 
 
 String s = "hello";
 System.out.println("hello".equals(s));
-// true, asking if s equals to "hello
+// true, asking if s equals to "hello-----------18
 
 System.out.println("hello".charAt(2)) ;//l
 
