@@ -2,18 +2,11 @@
 
 ## sub-heading 
 ### heading 3
-- Chapter 1
-  - 1.1
-  - 1.2
-- Chapter 2 
-  - 2.1
-  - 2.2
+
 ### git add .
 ### git commit -m "20241210"
 ### git push
-- Chapter 3
-  - 3.1
-  - 3.2
+
 ###Data Type ( 8 Primitive)
 - int 
 - doubel 
@@ -74,3 +67,24 @@
 
     
     x = x / 213; // 213/213
+
+
+    # Notes 
+    ## Week 1
+    - Data Type ( 8 Primtive)
+      - 6 of them handle numbers
+      - char & boolean
+
+    - Operators( ++x , x++)
+      - Division (devided by 0)
+      - Math Operator (% , ++x , x++,)
+      - Comparsion (>, <, >=, <= , != , ==) --> Primitives only , String not use 
+
+    - String (store zero or many characters " ", "Sharon", "123", "0")
+      - equals(string), length(), charAt(int)
+
+    - if , else if , else 
+    - test case! 
+    - for loop (int 1 = 0 ;i <= 3 ; i++){}
+    - for + if ( loop all elements + filtering)
+      - Searching (for + if)
