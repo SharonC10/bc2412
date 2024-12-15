@@ -2,12 +2,13 @@ public class DemoDataType {
   public static void main(String[] args) {
     // Comment. Welcome to bootcamp! Notes here!
     // ! 1. Data Type ( 8 Primitives)
+    // double, float, long, int, short, byte, booleam, char
 
-
-    // int -> Integer
-    int x = 3; // from right to left.
+    // 1.1 int -> Integer 整數
+    int x = 3; // from right to left.由右至左睇
     int dayOfWeek = 7;
     // int y = 3.2; // ! not OK, y is a variable that can store integer only.
+    
 
     double y2 = 3.2;
     // example .
@@ -45,7 +46,13 @@ public class DemoDataType {
 
     x = ((x + 3) / (6 + 1)) * (x + 1);
     System.out.println(x);// ----------Q4
+ double hi = 2.3 * 3;
+ System.out.println(hi);
+ double ho = 10.0 * 3;
+ System.out.println(ho);
 
+ 
+ 
     // divide
     int x2 = 3 / 2;
     // Step 1: 3 -> int value, 2 -> int value
@@ -62,7 +69,7 @@ public class DemoDataType {
 
     double x4 = 3.0 / 2;
     // Step 1: 3.0 -> double value, 2 -> int value
-    // Step 2: double value / int calue -> double value
+    // Step 2: double value / int value -> double value
     // Step 3: 3.0 /2 -> 1.5
     // Step 4: assign 1.5 (double value) to dounle type variable
     System.out.println(x4); // 1.5---------Q6
@@ -74,6 +81,7 @@ public class DemoDataType {
 
     // 0 /10
     System.out.println(0 / 10);// 0---------Q7
+    //System.out.println( (3+3)*4/6-3);
 
 
     // Same as below: int / double = double value
@@ -199,7 +207,7 @@ public class DemoDataType {
     System.out.println(isAdult); // ture
 
 
-
+// 13/12/24
     // char
     char q = 'a';
     int u = q;

@@ -1,4 +1,4 @@
-package questions;
+//package questions;
 /**
  * Expected Output:
  * 
@@ -41,10 +41,11 @@ public class JavaQuest1 {
     // code here with tips, pls fix ...
     // subtract = first - second
     System.out.println("Subtraction : 42 - 31 ");
-    System.out.println("The subtraction reuslt is " + 11);
+    
     int first2 = 42 ;
     int second2 = 31;
     int subtract = first2 - second2 ;
+    System.out.println("The subtraction reuslt is " + subtract);
 
 
     // another sum
@@ -73,7 +74,7 @@ public class JavaQuest1 {
     // Reading Example
     float fnumber = -130.20f; // By default, numbers are treated as double in Java.
     // Use suffix 'f' with value to make it float.
-    double dnumber = -20.50;
+    double dnumber = -20.50f; // add 'f'????
     System.out.println("The variable fnumber is " + fnumber);
     System.out.println("The variable dnumber is " + dnumber);
 
@@ -84,8 +85,8 @@ public class JavaQuest1 {
     int a = 7;
     int b = 3;
     // Fix it ...
-    // ! int reminder = a - b;
-    // ! System.out.println("The variable reminder is " + reminder);
+    int reminder = a % b;
+    System.out.println("The variable reminder is " + reminder);
 
 
 
