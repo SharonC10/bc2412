@@ -12,16 +12,18 @@ public class JavaQuest4 {
     // 1. Even numbers
     // 2. Divisible by 3
     // 3. > 0
-    int result = 0;
-   
-    for (int j = 1; j < 100; j++) {
+    int count = 0;
+    for (int i = 1; i < 100; i++) {
       // code here ...
-      if ( j %3 == 0 && j % 2 ==0 ){
-      //result = result + i;?????????
-        System.out.println(j);
-      } //點樣淨係output 10 個？
-    } 
-  
+      if ( i %3 == 0 && i % 2 ==0 ){
+        count++ ;
+
+        System.out.println( i);}
+       //點樣
+    } ;
+    
+
+    
     
     
 
