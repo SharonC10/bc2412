@@ -9,7 +9,7 @@ public class JavaQuest2 {
  //*
 // Primitive types and operators
 
-    int a = 1;
+    int a = 10;
     if (a > 9){
       System.out.println(" a > 9.");
     }
