@@ -9,13 +9,13 @@ public class JavaQuest2 {
  //*
 // Primitive types and operators
 
-    int a = -2;
+    int a = 1;
     if (a > 9){
       System.out.println(" a > 9.");
     }
     else if (a == 9) {
       System.out.println("a is equals to 9");
-    } else if (a < 9) {
+    } else if (a >= 0 && a <=8) {
       System.out.println("a is between 0 and 8");
     // how about a > 9?
     } else {
@@ -34,6 +34,9 @@ public class JavaQuest2 {
     else if (str.length() > 27) { // code here ... complete the code
       System.out.println("str length > 27");
     }
+
+    int result = str.length();
+    System.out.println(result);
 
 
     
