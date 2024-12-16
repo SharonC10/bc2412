@@ -34,9 +34,9 @@ public class JavaQuest3 {
 
     if (month == 1) {
       number_Of_DaysInMonth = 31;
-    } else if (month == 2 && year /400 == 0) {
+    } else if (month == 2 && year /100 == 0) {
       number_Of_DaysInMonth = 29;
-    } else if (month == 2 && year /400 == 1) {
+    } else if (month == 2 && year /100 == 1) {
       number_Of_DaysInMonth = 28;
     }else if (month == 3 ) {
       number_Of_DaysInMonth = 31;

@@ -212,7 +212,7 @@ public class DemoForLoop {
       }
 
     }
-    System.out.println(count); // read the 'count'
+    System.out.println("count:"+count); // read the 'count'
 
     // continue
     // - skip the rest, go to next iteration
