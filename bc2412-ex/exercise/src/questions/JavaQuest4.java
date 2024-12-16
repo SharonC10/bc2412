@@ -15,7 +15,7 @@ public class JavaQuest4 {
     int count = 0;
     for (int i = 1; i < 100; i++) {
       // code here ...
-      if ( i %3 == 0 && i % 2 ==0 ){
+      if ( i %3 == 0 && i % 2 ==0 && count < 10){
         count++ ;
 
         System.out.println( i);}
