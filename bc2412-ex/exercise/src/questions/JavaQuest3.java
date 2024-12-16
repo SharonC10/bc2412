@@ -32,13 +32,31 @@ public class JavaQuest3 {
     // 100) or The year can divided by 400
     // otherwise the February should have 28 days only
 
-    if (month == 1 && year == 2016) {
+    if (month == 1) {
       number_Of_DaysInMonth = 31;
-    } else if (month == 2 && year == 2016 && 2016%4 == 0) {
+    } else if (month == 2 && year %4 == 0) {
       number_Of_DaysInMonth = 29;
-    } else if (month == 2 && year == 2016 && 2016%4 == 1) {
+    } else if (month == 2 && year %4 == 1) {
       number_Of_DaysInMonth = 28;
     }else if (month == 3 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 4 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 5 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 6 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 7 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 8 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 9 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 10 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 11 && year == 2016 ) {
+      number_Of_DaysInMonth = 31;
+    }else if (month == 12 && year == 2016 ) {
       number_Of_DaysInMonth = 31;
     }
 
