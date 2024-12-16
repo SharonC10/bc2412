@@ -22,5 +22,14 @@ public class JavaQuest5 {
       }
     }System.out.println(lastCharacter);
 
+
+    String str2 = "Sharon."; 
+    int oChar = 0;
+    for (int i = 0; i < str2.length() ; i++){
+      if (str2.charAt(i) == 'o'){
+        oChar = i;
+      }
+    }System.out.println(oChar);
+
   }
 }
