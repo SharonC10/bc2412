@@ -34,29 +34,29 @@ public class JavaQuest3 {
 
     if (month == 1) {
       number_Of_DaysInMonth = 31;
-    } else if (month == 2 && year %4 == 0) {
+    } else if (month == 2 && year /400 == 0) {
       number_Of_DaysInMonth = 29;
-    } else if (month == 2 && year %4 == 1) {
+    } else if (month == 2 && year /400 == 1) {
       number_Of_DaysInMonth = 28;
-    }else if (month == 3 && year == 2016 ) {
+    }else if (month == 3 ) {
       number_Of_DaysInMonth = 31;
-    }else if (month == 4 && year == 2016 ) {
+    }else if (month == 4 ) {
+      number_Of_DaysInMonth = 30;
+    }else if (month == 5) {
       number_Of_DaysInMonth = 31;
-    }else if (month == 5 && year == 2016 ) {
+    }else if (month == 6  ) {
+      number_Of_DaysInMonth = 30;
+    }else if (month == 7 ) {
       number_Of_DaysInMonth = 31;
-    }else if (month == 6 && year == 2016 ) {
+    }else if (month == 8 ) {
       number_Of_DaysInMonth = 31;
-    }else if (month == 7 && year == 2016 ) {
+    }else if (month == 9  ) {
+      number_Of_DaysInMonth = 30;
+    }else if (month == 10 ) {
       number_Of_DaysInMonth = 31;
-    }else if (month == 8 && year == 2016 ) {
-      number_Of_DaysInMonth = 31;
-    }else if (month == 9 && year == 2016 ) {
-      number_Of_DaysInMonth = 31;
-    }else if (month == 10 && year == 2016 ) {
-      number_Of_DaysInMonth = 31;
-    }else if (month == 11 && year == 2016 ) {
-      number_Of_DaysInMonth = 31;
-    }else if (month == 12 && year == 2016 ) {
+    }else if (month == 11 ) {
+      number_Of_DaysInMonth = 30;
+    }else if (month == 12  ) {
       number_Of_DaysInMonth = 31;
     }
 

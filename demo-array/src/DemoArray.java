@@ -126,7 +126,7 @@ public class DemoArray {
         for (int i = 0; i < arr6.length; i++) {
             sum100 = sum100 + arr6[i];
         }
-        System.out.println(sum100);//----------214
+        System.out.println(sum100);// ----------214
 
         // swap
         int left = 7;
@@ -136,8 +136,8 @@ public class DemoArray {
         left = right;
         right = temp;
 
-        System.out.println("is" + left);//-----9
-        System.out.println("is" + right);//-----------7
+        System.out.println("is" + left);// -----9
+        System.out.println("is" + right);// -----------7
 
         // array
         int[] arr8 = new int[] {9, -8, 109, 99, 98};
@@ -149,17 +149,17 @@ public class DemoArray {
         int sum2 = 0;
         int sum3 = 0;
         int sum4 = 0;
-        for (int i = 0; i < arr8.length-1; i++) {
-            System.out.println(arr8[i] + arr8[i + 1]);//sum1 = arr8[0] + arr8[1];
-            //sum2 = arr8[1] + arr8[2];
-            //sum3 = arr8[2] + arr8[3];
-            //sum4 = arr8[3] + arr8[4];
+        for (int i = 0; i < arr8.length - 1; i++) {
+            System.out.println(arr8[i] + arr8[i + 1]);// sum1 = arr8[0] + arr8[1];
+            // sum2 = arr8[1] + arr8[2];
+            // sum3 = arr8[2] + arr8[3];
+            // sum4 = arr8[3] + arr8[4];
         }
-        
-        //System.out.println(sum1);// print1 (9 + -8)
-        //System.out.println(sum2);// print 101 (-8 + 109)
-        //System.out.println(sum3);// print 208 (109 + 99)
-        //System.out.println(sum4);// print 197 (99 + 98)
+
+        // System.out.println(sum1);// print1 (9 + -8)
+        // System.out.println(sum2);// print 101 (-8 + 109)
+        // System.out.println(sum3);// print 208 (109 + 99)
+        // System.out.println(sum4);// print 197 (99 + 98)
 
 
         int temp2 = 0;
@@ -167,21 +167,94 @@ public class DemoArray {
         int[] arr7 = new int[] {9, -8, 109, 99, 98};
         // move max value to the tail
         // for loop + swap
-        for (int i = 0; i < arr7.length-1 ; i++) {//Step1: 
-            if (arr7[i] > arr7[i+1]) {
-                temp2 = arr7[i]; //backup
-                arr7[i+1] = temp2; //swap
-                //swap
-            } System.out.println(Arrays.toString(arr7)); //[x, x, x, x, 109]
-    }
-        //{9, -8, 109, 99, 98};
-        //{-8, 9, 109, 99, 98};
-        //{-8, 9, 109, 99, 98};
-        //{-8, 9, 99, 109, 98};
-        //{-8, 9, 99, 98, 109};
+        for (int i = 0; i < arr7.length - 1; i++) {// Step1:
+            if (arr7[i] > arr7[i + 1]) {
+                temp2 = arr7[i]; // backup
+                arr7[i] = arr7[i + 1];
+                arr7[i + 1] = temp2; // swap
+                // swap
+            }
+            System.out.println(Arrays.toString(arr7)); // [x, x, x, x, 109]
+        }
+        // {9, -8, 109, 99, 98};
+        // {-8, 9, 109, 99, 98};
+        // {-8, 9, 109, 99, 98};
+        // {-8, 9, 99, 109, 98};
+        // {-8, 9, 99, 98, 109};
         // System.out.println(Arrays.to.String(arr7)); //[x, x, x, x, 109]
 
+        int product = 1;
+        Integer[] arr20 = new Integer[] {9, 6, 4};
+        // Product for all numbers
+        for (int i = 0; i < arr20.length; i++) {
+            product = product * arr20[i];
+        }
+        System.out.println(product);// ----------------216
 
 
+        double[] prices = new double[] {8.2, 6.5, 10.5};
+        int[] quantities = new int[] {9, 8, 3};
+        // 8.2 * 9 + 6.5 X 8 + 10.5 * 3
+        double sum20 = 0.0;
+        for (int i = 0; i < prices.length; i++) {
+            sum20 += quantities[i] * prices[i];
+        }
+
+        String s = String.valueOf(123);
+        System.out.println(s);// "123"
+        s = String.valueOf(true);
+        System.out.println(s);// "true"
+
+        System.out.println(String.valueOf('A'));// 'A'
+
+        Integer i1 = Integer.valueOf("123");
+        System.out.println(i1);// "123"
+
+        // Integer i2 = Integer.valueOf("h"); java.lang.NumberFormatException
+
+        // "hello" -> 'h', 'e', 'l','l',o
+        char[] chArr = "hello".toCharArray(); //經常用!!!! toCharArray -> 
+        
+        //olleh
+        char cTemp = 0;
+        for (int i = 0; i < chArr.length / 2 ; i++){ // 0, 1
+            // chArr[i] vs chArr[chArr.length - i]
+                cTemp = chArr[i];
+                chArr[i] = chArr[chArr.length - i -1];
+                chArr[chArr.length -1 -i] = cTemp;
+        }
+
+
+        String result = "";
+        for (int i = 0 ; i < chArr.length; i++){ //
+            result += chArr[i];
+        }System.out.println(result);//olleh
+
+        // h -> i
+        // e -> f
+        // l-> m
+        //o -> p
+        //ifmmp (hello)
+        //cha -> int -> cha??
+        chArr = "hello".toCharArray();
+        for (int i = 0; i <chArr.length ; i++){
+            chArr[i] = (char)(chArr[i] + 1);// h + 1 -> i, h下一個係i 
+        }//
+        System.out.println(String.valueOf(chArr));// 要背
+        //"ifmmp", char Array -> String.
+
+        // which char is max? 
+        //assum we have small letter,26
+        char[] arr12 = new char []{'p', 'a', 'p', 'b', 'a', 'p'};
+        //more than one loop
+        String maxNumChar = "";
+        int count = 0;
+        for (int i =0; i < arr12.length; i++);
+        for (int i = 0; i < 26; i++);
+        if (arr12.length == 'p'){
+            count++;
+        }
+
+        System.out.println(count);//p
     }
 }
