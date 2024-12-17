@@ -20,7 +20,7 @@ public class DemoArray {
         for (int i = 0; i < arr.length; i++) { // i = 0,1,2
             // as "arr.length -> 0,1,2 -> 3, 10,11"
             if (arr[i] >= 10) // 1. print all value, which > 10
-                System.out.println(arr[i]); // use if filter
+                System.out.println("print:" + arr[i]); // use if filter
         }
 
         // declare double array , length ->5
@@ -256,5 +256,36 @@ public class DemoArray {
         }
 
         System.out.println(count);//p
+
+        //數字母
+        //char[] arr12 = new char []{'p', 'a', 'p', 'b', 'a', 'p'};
+        int [] counters = new int [26];
+        // count[15] =3  i-> 'p' -> 'p' - 'a' =15 -> 112 - 97 = 15;
+        //count[0]=2 -> 'a' - 'a' =0 
+        //count [1] = 1
+        //count [3] = 0
+
+        char maxNumberChar = ' ';
+        for (int i = 0 ; i < arr12.length; i++){
+            counters[arr12[i] - 'a']++ ; // why -a, as within 0 - 25 
+            // a - a = 0; mark one! won't use -b
+            //用左減號char 會自己轉‘數目‘
+
+            System.out.println(arr12[i] - 'a');
+            //System.out.println(i);
+            // counters[arr12[i]-'a'] = counters[arr12[i]-'a'] +1 
+        } 
+
+        int max2 = Integer.MIN_VALUE;// 最細嘅數
+        for (int i = 0 ; i < counters.length; i++ ){
+            //max = Math.max(counters[i], max == 97);
+            if (counters[i] > max){
+                maxNumberChar = (char) (i + 97);
+                max2 = counters[i];
+            }
+        }
+        
+    
+// p - a --> 0 - 26 數字 , 
     }
 }

@@ -10,6 +10,10 @@ public class JavaQuest7 {
 
     // Write a loop to sum up all value in the int array
     // code here ...
+    int [] arr = new int []{1,2,3,4,5,6,7,8,9,10};
+    for (int i=0; i < arr.length; i++){
+      sum = sum+ i;
+    } 
     System.out.println("The sum is " + sum);
   }
 }
