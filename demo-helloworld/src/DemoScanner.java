@@ -44,7 +44,7 @@ public class DemoScanner {
     //num -> number of days
     int totalMinutes = 0;
     for (int i = 0; i < day; i++){
-      for(int j = 0 ; j < hours ; j++){
+      for(int j = 0 ; j <  ; j++){
 
       }
     

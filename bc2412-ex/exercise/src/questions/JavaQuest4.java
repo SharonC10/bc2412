@@ -22,6 +22,14 @@ public class JavaQuest4 {
        //點樣
     } ;
     
+    // even num + sum
+    int sum = 0;
+    for (int i =0; i <100; i++){
+      if (i % 2 ==0 && sum < 10 ){
+      sum++;
+      System.out.println(i);
+    }
+    } System.out.println("sum" + sum);
 
     
     

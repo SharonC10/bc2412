@@ -19,6 +19,7 @@ public class JavaQuest5 {
     for (int i = 0; i < str.length(); i++) {
       if (str.charAt(i) == 'c' ) {
         lastCharacter = i; // str.charAt(i) = 99
+        System.out.println("asdasdasd"+lastCharacter);
       }
     }System.out.println(lastCharacter);
 
@@ -30,6 +31,14 @@ public class JavaQuest5 {
         oChar = i;
       }
     }System.out.println(oChar);
+
+    String str3 = "Baby Birthday."; 
+    int bChar = -1; 
+    for (int i = 0; i < str3.length() ; i++){
+      if (str3.charAt(i) == 'B'){
+        bChar = i;
+      }
+    }System.out.println("B:"+ bChar);
 
   }
 }
