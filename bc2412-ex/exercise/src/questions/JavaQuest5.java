@@ -24,7 +24,7 @@ public class JavaQuest5 {
 
 
     String str2 = "Sharon."; 
-    int oChar = 0;
+    int oChar = -1;
     for (int i = 0; i < str2.length() ; i++){
       if (str2.charAt(i) == 'o'){
         oChar = i;
