@@ -15,13 +15,20 @@ public class JavaQuest5 {
 
     int count = 0;
     int lastCharacter = -1;
+    
+    
 
     for (int i = 0; i < str.length(); i++) {
       if (str.charAt(i) == 'c' ) {
         lastCharacter = i; // str.charAt(i) = 99
         System.out.println("asdasdasd"+lastCharacter);
       }
-    }System.out.println(lastCharacter);
+    }
+    if (lastCharacter == -1){
+      System.out.println("Not Found" + lastCharacter);}
+      System.out.println(lastCharacter);
+
+      
 
 
     String str2 = "Sharon."; 
