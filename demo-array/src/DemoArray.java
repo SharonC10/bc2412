@@ -40,7 +40,7 @@ public class DemoArray {
         }
         System.out.println(sum);
 
-        // String arrway
+        // String arrwy
         // "abc" , "def" , "ijk"
         // find "abc"
         String[] arr3 = new String[3];
@@ -126,7 +126,7 @@ public class DemoArray {
         for (int i = 0; i < arr6.length; i++) {
             sum100 = sum100 + arr6[i];
         }
-        System.out.println(sum100);// ----------214
+        System.out.println("sum:" + sum100);// ----------214
 
         // swap
         int left = 7;

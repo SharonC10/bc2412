@@ -39,7 +39,18 @@ for (int i = 0; i < arr2.length; i++){
   sum2 += arr2[i];
 } System.out.println("sum is " + sum2);
 
-//String 
+//String array
+//"abc", "def","ijk"
+String [] arr3 = new String []{ "abc", "def", "ijk"};
+String target = "abc";
+boolean isTargetExist = false;
+
+for (int i=0; i< arr3.length; i++){
+if (target == arr3[i]){
+  isTargetExist =true;
+}
+}
+
 
 
   }
