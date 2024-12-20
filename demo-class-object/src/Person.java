@@ -29,7 +29,11 @@ public class Person { // ->blueprint - define a Person
         return this.emailAddress;
     }
 
-
+//setter
+//void -> return type -> means return nothing
+public void setAge(int age){
+    this.age = age;
+}
 
     public static void main(String[] args) {
         // 20/12
@@ -73,9 +77,14 @@ public class Person { // ->blueprint - define a Person
         //String s1 = "hello";
         //String [] strings = new String []{ s1, "world"}
         Person p3 = p2;
-        System.out.println(p3.getName());
-        System.out.println(p3.getAge());
-        System.out.println(p3.getEmailAddress());
+        System.out.println(p3.getName()); //lucas
+        System.out.println(p3.getAge());  //17
+        System.out.println(p3.getEmailAddress());//lucas@gmail.com
+
+        //setter
+       p2.setAge(30);
+       System.out.println(p2.getAge());
+       System.out.println(p3.getAge());
 
 
         //! what is "this" and why? 
