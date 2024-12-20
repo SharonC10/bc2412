@@ -160,35 +160,38 @@ public class LoopExercise {
     // u -> 4 score
     // for other character, -1 score
     String s13 = "lrlaudbucp";
-    // char[] s14 = "lrlaudbucp".toCharArray();
-    int l = 1;
-    int d = 2;
-    int r = 3;
-    int u = 4;
-    int count13 = 0;
+    int score = 0;
 
-    switch (s13) {
-      case "l": {
-        for (int i = 0; i < s13.length(); i++) {
-          count13++;
-        }
+    for (int i=0; i < s13.length(); i++){
+      
+      switch (s13.charAt(i)) {
+      case 'l': {
+        score += 1;
       }
-      case "r": {
-        count13 = count13 + 3;
+      break;
+
+      case 'r': {
+        score = score + 3;
       }
-      case "d": {
-        count13 = count13 + 2;
+      break;
+
+      case 'd': {
+        score = score + 2;
       }
-      case "u": {
-        count13 = count13 + 4;
+      break;
+
+      case 'u': {
+        score = score + 4;
       }
-        break;
+      break;
 
       default: {
-        count13 = count13 - 1;
+        score = score - 1;
       }
-    }
-    System.out.println("score:" + count13);
+    }       
+    } 
+
+    System.out.println("score: " + score);
 
 
 
@@ -221,11 +224,16 @@ public class LoopExercise {
     // Print: [0.3, 0.4, 0.7]
     // bigDemo
     
-    BigDecimal q17 = BigDecimal.valueOf(0.1f);
-    BigDecimal arr16 = 
+    BigDecimal q17 = BigDecimal.valueOf(0.1d);
+    float q17r = BigDecimal.valueOf(0.6d).add(BigDecimal.valueOf(0.1d)).floatValue(); // 0.7
+
+
     for (int i = 0 ; i < arr16.length; i++){
-    BigDecimal arr16[i] = q17.add(arr16[i]);
-    }System.out.println()
+      double value = (double) 0.6f;
+      System.out.println(value);
+      arr16[i] = BigDecimal.valueOf(value).add(BigDecimal.valueOf(0.1d)).floatValue();
+    }
+    System.out.println(Arrays.toString(arr16));
 
 
     // 18. Count the number of target strings in the String[]
@@ -246,7 +254,7 @@ public class LoopExercise {
     // Assumption: each digit value appear once in the String
     // Print: "49280"
     String s19 = "40289";
-    // char [] arr19 = mew char [s19.length()];
+    // char [] arr19 = new char [s19.length()];
     // int minIndex = -1;
     // int maxIndex = -1;
     int max2 = Integer.MIN_VALUE;
@@ -287,9 +295,9 @@ public class LoopExercise {
 
     } System.out.println("longest = " +longest);
 
-    // 13,17,19
+    // 17,19
     // ---------------------------------------
-    // 17:
+    // 17:未解決
 
 
 
