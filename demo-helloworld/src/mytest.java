@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class mytest {
   public static void main(String[] args) {
     int sum3 = 0;
@@ -51,8 +53,37 @@ public class mytest {
     System.out.println(substr1);
 
     int ascii = 65;
-    char character = (char)ascii; //downcasting
-    System.out.println(character);
+    char character = (char) ascii; // downcasting
+    System.out.println("character = " +character);
+
+    int sum = 0;
+    int[] arr4 = new int[] {3, 10, 11};
+    for (int i = 0; i < arr4.length; i++) {
+      sum = sum + arr4[i];
+    }
+    System.out.println("sum:" + sum);
+
+    String[] arr5 = new String[] {"abc", "def", "ijk"};
+    String target = "ijk";
+    boolean isIjk = false;
+    for (int i = 0; i < arr5.length; i++) {
+      if (target.equals(arr5[i])) {
+        isIjk = true;
+      }
+    }
+    System.out.println("isIjk:" + isIjk);
+
+    int temp3 = 0;
+    int[] arr7 = new int[] {9, -8, 109, 99, 98};
+    for (int i = 0; i < arr7.length-1; i++){
+      //i = 0-4only; arr7.length -> 1-5;
+      //arr7.length - 1 -> 1-4
+      if (arr7[i] > arr7[i +1]){
+        temp3 = arr7[i];
+        arr7[i] = arr7[i+1];
+        arr7[i+1] = temp3;
+      }
+    }System.out.println(Arrays.toString(arr7));
 
   }
 }

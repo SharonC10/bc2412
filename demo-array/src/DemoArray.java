@@ -39,7 +39,7 @@ public class DemoArray {
 
         }
         System.out.println(sum);
-
+//---------------------------------------------------
         // String arrwy
         // "abc" , "def" , "ijk"
         // find "abc"
@@ -55,7 +55,7 @@ public class DemoArray {
                 isTargetExist = true;
         }
         System.out.println(isTargetExist); // true
-
+//---------------------------------------------------
         char[] arr4 = new char[] {'b', 'c', 'a'};
         // same as arr4[0] = "b";
         // arr4[1] = "a";
@@ -161,7 +161,7 @@ public class DemoArray {
         // System.out.println(sum3);// print 208 (109 + 99)
         // System.out.println(sum4);// print 197 (99 + 98)
 
-
+//-------------------------------------------------------
         int temp2 = 0;
         // array swap
         int[] arr7 = new int[] {9, -8, 109, 99, 98};
@@ -182,7 +182,7 @@ public class DemoArray {
         // {-8, 9, 99, 109, 98};
         // {-8, 9, 99, 98, 109};
         // System.out.println(Arrays.to.String(arr7)); //[x, x, x, x, 109]
-
+//-------------------------------------------------------
         int product = 1;
         Integer[] arr20 = new Integer[] {9, 6, 4};
         // Product for all numbers
@@ -229,14 +229,14 @@ public class DemoArray {
         for (int i = 0 ; i < chArr.length; i++){ //
             result += chArr[i];
         }System.out.println(result);//olleh
-
+//-------------------------------------------------------
         // h -> i
         // e -> f
         // l-> m
         //o -> p
         //ifmmp (hello)
         //cha -> int -> cha??
-        chArr = "hello".toCharArray();
+        chArr = "hello".toCharArray(); 
         for (int i = 0; i <chArr.length ; i++){
             chArr[i] = (char)(chArr[i] + 1);// h + 1 -> i, h下一個係i 
         }//
@@ -256,7 +256,7 @@ public class DemoArray {
         }
 
         System.out.println(count);//p
-
+//-------------------------------------------------------
         //數字母
         //char[] arr12 = new char []{'p', 'a', 'p', 'b', 'a', 'p'};
         int [] counters = new int [26];
@@ -284,8 +284,32 @@ public class DemoArray {
                 max2 = counters[i];
             }
         }
-        
-    
-// p - a --> 0 - 26 數字 , 
+        //-------------------------------------------------------
+        //19/12 Bubble Sort 
+        //Sorting, without create a new array
+        // Move the value to tail
+        //Step :[X,X,X,90] =, when i = 0 [20,-20,50, -40,90]
+        // [X,X,X,50, 90],when i = 1
+        //[X,X,20,50, 90] when i = 2
+        //[X, -20,20,50,90]when i = 3
+        // [-40,-20,20,50,90]
+        //move 好多數 -> 用兩個for loop
+        int [] arr200 = new int []{20, -20, 90, 50, -40};
+        int temp20 = 0;
+        for (int i=0; i< arr200.length -1; i++){//0 -3
+            //
+
+            for (int j = 0; j< arr200.length -i -1 ; j++){ //swap index //j <arr20.length - i -1
+                //
+                if (arr200[j] > arr200[j + 1]){
+
+                    temp20 = arr200[j];
+                    arr200[j] = arr200[j +1];
+                    arr200[j +1] = temp20; 
+                }
+            }
+        }
+    System.out.println(Arrays.toString(arr200));
+
     }
 }

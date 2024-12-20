@@ -87,7 +87,33 @@ public class ForLoop {
     // sum up all the odd (0-10)
     // sum up all the even (0-10)
     // diff (positive no.)
+    int sum100 = 0;
+    for (int i=0; i < 11; i++){
+      if (i % 2 == 0){
+        sum100 = sum100 + i;
+      }
+    }System.out.println("even sum:" + sum100);
 
+    int sum200 = 0;
+    for (int i=0; i< 11; i++ ){
+    if (i % 2 == 1){
+      sum200 = sum200 + i;
+    }
+  }System.out.println("odd sum:" + sum200);
+  
+  int diff2 = 0;
+  for (int i=0; i<11; i++){
+    if (sum200 > sum100 ){
+      diff2 = sum200 - sum100;
+    }else {
+      diff2 = sum100 -sum200;
+    }
+  }
+  System.out.println("diff:" + diff2);
+
+
+
+//------------------------------------------------
     int Sum3 = 0;
     int Sum4 = 0;
     for (int i = 0; i <= 10; i++) {

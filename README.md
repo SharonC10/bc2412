@@ -88,3 +88,18 @@
     - for loop (int 1 = 0 ;i <= 3 ; i++){}
     - for + if ( loop all elements + filtering)
       - Searching (for + if)
+
+
+## Week 2
+- while  loop (difference between for loop and while loop) more flexible 
+- for-each loop (simple design for loop: one element per iteration)
+- array  (Support 17 types) -> can String, char
+- 8 wrapper classes (8 primtives)
+- String methods
+- Static Methods (similar to formula)
+ - Input parameters
+ - return type
+ - Method name 
+ - Method Signature = input params + method name
+- BigDecmal for math calculation
+- 20 Question! 

@@ -3,6 +3,7 @@ import java.math.RoundingMode;
 
 public class DemoBigDecimal {
   public static void main(String[] args) {
+    
     double result = 0.2 + 0.1;
     System.out.println(result);// 0.300000000000004
     if (result == 0.3) {
@@ -16,7 +17,7 @@ public class DemoBigDecimal {
 
     BigDecimal bd3 = bd1.add(bd2);
     System.out.println(bd3.doubleValue());// 0.3
-
+//--------------------------------------------
     System.out.println(0.3 - 0.1);// ---------0.19999999999999998
     // substract
     BigDecimal bb1 = BigDecimal.valueOf(0.3);
@@ -101,7 +102,7 @@ public class DemoBigDecimal {
       // Math min()
       //System.out.println(sqrt.(9));
       System.out.println(10);
-      System.out.println(circleArea); 
+      System.out.println("circleArea" + circleArea); 
 
       //round() -> nearest to integer
       double u = 3.456;
