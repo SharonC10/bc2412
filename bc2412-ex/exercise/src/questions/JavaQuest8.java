@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Example Output
  * Second Max = 230
@@ -12,6 +14,21 @@ public class JavaQuest8 {
 
     // Your program should be able to handle all the above test case.
     int secondMax;
+    int max = Integer.MIN_VALUE;
     // code here ...
+    for (int i= 0 ; i< nums.length; i++){
+      if (nums[i] > max){
+        max = nums[i];
+      }// x,x,x,x,x,240
+      //x,x,x,x,230,240
+      //x,x,x,100,230,240
+      //x,x,80,100,230,240
+      //x,5,80,100,230,240
+      //-10,5,80,100,230,240
+    }
+    for (int i= 0; i < nums.length- 1; i++){
+      
+    }
+    System.out.println(max);
   }
 }
