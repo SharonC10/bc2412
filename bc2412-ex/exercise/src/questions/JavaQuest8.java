@@ -26,9 +26,13 @@ public class JavaQuest8 {
       //x,5,80,100,230,240
       //-10,5,80,100,230,240
     }
-    for (int i= 0; i < nums.length- 1; i++){
-      
+    for (int j= 0; j < nums.length; j++){
+      for (int j= 0 ; j< nums.length; j++){
+        if (nums[j] > max){
+          max = nums[j];
+        }
     }
+  }
     System.out.println(max);
   }
 }

@@ -37,9 +37,19 @@ public class Test {
     //vincent , 18 , vincent@gmail.com
     //name , age , email
     
+
+//1223
+//String s2 = p2;
+//String s3= new Integer;
+
+
+
     
-    //String s1 = "hello";
-    //String [] strings = new String []{ s1, "world"}
+    String s1 = "hello";
+    String [] strings = new String []{ s1, "world"};
+
+    double d1 = Double.valueOf(0.6f);
+    System.out.println(d1);
 
 }
 

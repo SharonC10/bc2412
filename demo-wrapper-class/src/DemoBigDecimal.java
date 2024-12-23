@@ -9,8 +9,10 @@ public class DemoBigDecimal {
     if (result == 0.3) {
       System.out.println("Result is 0.3.");
     } else {
-      System.out.println("Result is NOT 0.3.");
+      System.out.println("Result is NOT 0.3.");// Result not!!
     }
+
+
     // Solution: BigDeciaml
     BigDecimal bd1 = BigDecimal.valueOf(0.2);
     BigDecimal bd2 = BigDecimal.valueOf(0.1);
@@ -25,6 +27,7 @@ public class DemoBigDecimal {
     BigDecimal bb3 = bb1.subtract(bb2);
     System.out.println(bb3.doubleValue());// ------------0.2
     // System.out.println(bb3.intValue()); -> 0
+    //--------------------------------------------
 
     System.out.println(0.1 * 0.2);// 0.020000000000004
     // multiply
