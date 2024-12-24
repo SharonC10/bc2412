@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Item {
   private double prices ;
   private int quantity;
@@ -21,9 +23,10 @@ public class Item {
     return this.name;
   }
 
-  public static void main (String []args){
+  public double totalAmount(){
+   return BigDecimal.valueOf(this.prices)
+   .multiply(BigDecimal.valueOf(this.quantity))
+   .doubleValue();
 
-    Item i1 = new Item(10000.0,10,"Apple");
-    System.out.println(i1.getPrices() + ","+  i1.getQuantity()+","+ i1.getName());
   }
 }
