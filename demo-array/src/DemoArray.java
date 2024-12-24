@@ -288,7 +288,7 @@ public class DemoArray {
         //19/12 Bubble Sort 
         //Sorting, without create a new array
         // Move the value to tail
-        //Step :[X,X,X,90] =, when i = 0 [20,-20,50, -40,90]
+        //Step :[X,X,X,X,90] =, when i = 0 [20,-20,50, -40,90]
         // [X,X,X,50, 90],when i = 1
         //[X,X,20,50, 90] when i = 2
         //[X, -20,20,50,90]when i = 3

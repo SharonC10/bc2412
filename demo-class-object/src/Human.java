@@ -4,15 +4,40 @@ import java.math.RoundingMode;
 public class Human {
   private double height;// instance variable -> object's variable
   private double weight;
+  private char gender;
 
   // ----------------------------------------------------
   // Construtor
+  //can be more than one construtor
   public Human(double height, double weight) {
-    this.height = height;
-    this.weight = weight;
+    this.height = height; // the user pass the variable to you, and you put in the object
+    this.weight = weight;//put the variable to the object
+    this.gender = gender;
 
   }
+
+  //empty construtor
+  public Human (){
+
+}
+
+
+
+  //Construtor is same as method. Not allow same construtor signature.
+  public Human (double height){
+    this.height = height;
+  }
   // ----------------------------------------------------
+  //Getter
+public double getHeight(){
+  return this.height;
+}
+public double getWeight(){
+  return this.weight;
+}
+public char getGender(){
+  return this.gender;
+}
 
 
   // instance method
@@ -23,7 +48,7 @@ public class Human {
         .divide(BigDecimal.valueOf(Math.pow(this.height, 2.0)), 2,
         //Math.pow -> (double a ,double b) b ->2.0 = 二次方(*2)
             RoundingMode.HALF_UP)
-        .setScale(2, RoundingMode.HALF_DOWN)//
+        .setScale(2, RoundingMode.HALF_DOWN)//for other operation, + , -, *
         .doubleValue();
   }
 
@@ -53,6 +78,10 @@ public class Human {
         .doubleValue();
   }
 
+  public static char getGender(Human human){
+    return human.getGender();
+  }
+
   // Under Weight (<18.5)
   // Normal (18.5 - 24.9)
   // Overweight (25.0 - 29.9)
@@ -64,9 +93,29 @@ public class Human {
     Human h1 = new Human(1.74, 68);
     System.out.println(h1.bmi());
     // non-terminating decimal expansion;//22.46
-    System.out.println(h1.bmiIndex());
-    System.out.println(Human.bmi2(68, 1.74));
+    System.out.println(h1.bmiIndex());//Normal
+    System.out.println(Human.bmi2(68, 1.74));//22.46
+    
 
+
+    //Construtor object by empty construtor
+    Human h2 = new Human();
+    System.out.println(h2.getHeight());//0.0
+    System.out.println(h2.getWeight());// 0.0
+    //default value
+    System.out.println(h2.getGender());// 
+
+if (h2.getGender() == '\u0000'){
+  //different to ' '
+  System.out.println("Char's default valur");
+}
+
+
+    double x;
+    //System.out.println(x);
+    //for local variable, you cannot get the value before initialization
+
+    
 
 
   }
