@@ -5,6 +5,9 @@ public class Item {
   private int quantity;
   private String name;
 
+  public Item(){
+
+  }
   //Construtor
   public Item (double prices, int quantity, String name){
     this.prices = prices;
@@ -23,10 +26,15 @@ public class Item {
     return this.name;
   }
 
-  public double totalAmount(){
+  //instance Method
+  //to present the obiect data
+  public double totalAmount(){ 
    return BigDecimal.valueOf(this.prices)
    .multiply(BigDecimal.valueOf(this.quantity))
-   .doubleValue();
+   .doubleValue(); //this is item.totalAmount
+   //will use on the order
+
+   //static ? 
 
   }
 }

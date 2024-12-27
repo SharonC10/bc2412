@@ -1,63 +1,64 @@
 public class Person { // ->blueprint - define a Person
     // in vincent world, person is name and age
     // attributes, defining "Person" 一樣object
-    //1. Attributes
+    // 1. Attributes
     private String name;
     private int age;
     private String emailAddress;
-    private char gender; //2312
-//-------------------------------------------------
-    // constructor (NOT a Method) no return type 
-    //-> no need return
-    //-> constructor is to create a Object
-    //-> constructor 放係 between attribute & Object 
+    private char gender; // 2312
+    // -------------------------------------------------
+    // constructor (NOT a Method) no return type
+    // -> no need return
+    // -> constructor is to create a Object
+    // -> constructor 放係 between attribute & Object
 
-    //2.Construtor
-    public Person(String name, int age, String emailAdress, char gender) { //(String x, y , z)
+    // 2.Construtor
+    public Person(String name, int age, String emailAdress, char gender) { // (String x, y , z)
         this.name = name; // "peter"
         this.age = age;
         this.emailAddress = emailAdress;
         this.gender = gender;
     }
-//-------------------------------------------------
-    //getter (is Method) (instance = object )
-    //instance Method is able to return self value
+    // -------------------------------------------------
+    // getter (is Method) (instance = object )
+    // instance Method is able to return self value
 
-    //3. Getter
+    // 3. Getter
     public String getName() {
         return this.name;
     }
 
-    public int getAge(){
+    public int getAge() {
         return this.age;
     }
 
-    public String getEmailAddress(){
+    public String getEmailAddress() {
         return this.emailAddress;
     }
 
 
-    public boolean isMale(){//1223 封裝
+    public boolean isMale() {// 1223 封裝
         return this.gender == 'M' ? true : false;
     }
 
-    public int getnameLength(){
+    public int getnameLength() {
         return this.name.length();
     }
 
-    
-    // -> what is instance method? 
-    //is Getter is instance method?
-//-------------------------------------------------
 
-//4. Setter
-//void -> return type -> means return nothing
-// in Setter section -> need to add 'void'
+    // -> what is instance method?
+    // is Getter is instance method?
+    // -------------------------------------------------
 
-public void setAge(int age){
-    this.age = age;
-}
-//-------------------------------------------------
+    // 4. Setter
+    // void -> return type -> means return nothing
+    // in Setter section -> need to add 'void'
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // -------------------------------------------------
     public static void main(String[] args) {
         // 20/12
         int x = 3;
@@ -118,11 +119,8 @@ public void setAge(int age){
         //! 
 //-------------------------------------------------
 
-        Person p1 = new Person ("Jimmy" , 5, "jimmy@gmail.com", 'M',){
-System.out.println(p1.isMale());//ture
-System.out.println(p1.get)
-        }
-
+        Person p1 = new Person ("Jimmy" , 5, "jimmy@gmail.com", 'M');
+        System.out.println(p1.isMale());
 
 
     }
