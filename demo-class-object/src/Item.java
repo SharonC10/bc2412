@@ -25,6 +25,11 @@ public class Item {
   public String getName(){
     return this.name;
   }
+  //Setter-------------------------
+  public void setQuantity(int quantity){
+    this.quantity = quantity;
+  }
+//----------------------------------------------------
 
   //instance Method
   //to present the obiect data

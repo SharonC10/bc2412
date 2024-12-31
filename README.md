@@ -103,3 +103,11 @@
  - Method Signature = input params + method name
 - BigDecmal for math calculation
 - 20 Question! 
+
+## Week 3 
+- Class and Object 
+Example: Customer / Order/ Item
+Example: Person 
+Example: Human (bmi)
+Example: 
+Example: 

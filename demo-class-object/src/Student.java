@@ -63,6 +63,7 @@ this.score = score;
   //5: 4
   //6: 0
 
+  //system out
   //Student 1 has 4 candies
   //Student 2 has 6 candies
   //Student 3 has 0 candies
@@ -73,3 +74,16 @@ this.score = score;
   //tips: static
   //for loop
 
+
+  //Question 2
+  //開一個 Student2.class to store his own candies
+  // Candy.class has attribute color, 
+  //20 candies -> distribute students according to score
+  // Rule: Every round of ditribution, above 80 score -> RED candies ; 
+  //Above 60 - 79  score -> BLUE  candy; the rest YELLOW; 
+
+  //red, blue, yellow
+//expected output :Sysout  return Student [](Student should have Candy attribute)
+ 
+
+  
