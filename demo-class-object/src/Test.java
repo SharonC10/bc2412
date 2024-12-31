@@ -51,6 +51,13 @@ public class Test {
     double d1 = Double.valueOf(0.6f);
     System.out.println(d1);
 
+    String sentences = "hello world";
+    String 
+
+
+   
+
+
 }
 
 }

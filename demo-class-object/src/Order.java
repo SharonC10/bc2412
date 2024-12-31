@@ -56,7 +56,8 @@ public class Order {
   //Order order = new Order(items);
   //order.totalAmount();
   // order.totalAmount
-  public double totalAmount() { //this totalAmount is order totalAmount
+  public double totalAmount() { 
+    //this totalAmount is order totalAmount
     //0.0 + 10.3 (new BigDecimal object) ->10.3 (new BigDecimal Object)
     //next rount 10.3 + 7.7 (new BigDecimal Object) -> 18.0 (new BigDeciaml)
     BigDecimal sum = BigDecimal.valueOf(0.0);

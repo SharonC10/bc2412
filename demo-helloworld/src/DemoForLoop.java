@@ -105,7 +105,7 @@ public class DemoForLoop {
     for (int c = 0; c <= 20; c++) {
       sum = sum + c;
     }
-    System.out.println(sum);// 210
+    System.out.println("sum:" + sum);// 210
 
     // System.out.println(i); // ! is declared withing the for loop
     // c-- why? what it is?
@@ -119,6 +119,7 @@ public class DemoForLoop {
     for (int i = 0; i <= 10; i++) {
       if (i % 2 == 1) {
         sum3 = sum3 + i;
+        System.out.println("odd: " +i);// 1,3,5,7,9
       }
     }//單數總和
     System.out.println(sum3);//--------25
@@ -146,16 +147,13 @@ public class DemoForLoop {
     System.out.println(sum); // 25------------
 
 
-
+//sum up 0-10= 0+1+2+3+4+5+6+7+8+9+10
     int sum2 = 0;
     for (int p = 0; p <= 10; p++) {
       sum2 = sum2 + p;
-      {
-        if ((sum2 + p) % 2 == 1)
-          ;
-      }
+      
     }
-    System.out.println(sum2);
+    System.out.println("sum2: "+ sum2);//55
 
 
 

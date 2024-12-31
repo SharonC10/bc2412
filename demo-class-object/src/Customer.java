@@ -9,14 +9,18 @@ public class Customer {
   //private boolean isVIP;
 //won't write it -> VIP can cal from data, will change, no need to save
   // ------------------------------------------
+
   // Construtor
   // public Customer (long id, Order[]orders){
   // this.id = id;
   // this.orders = orders;
   // }
 
+
+
+
   // 1. Normally Customer can be created without order
-  public Customer(long id, Order[] orders, boolean isVIP) {
+  public Customer(long id) {
     this.id = id;
     this.orders = new Order[0];
   }
@@ -53,9 +57,9 @@ public class Customer {
   // --------------------------------------------------
   // //order id -> item[]
   public Item[] getItem(long orderId) {
-    for (Order order : this.orders) {
-      if (order.getId() == orderId) {
-        return order.getItem();
+    for (Order order : this.orders) {//each loop
+      if (order.getId() == orderId) { // if orderId ＝ 我要嘅ID ->return getItem
+        return order.getItem(); //從OrderId中取得貨物
       }
     }
     return new Item[0]; // or return null
@@ -65,7 +69,11 @@ public class Customer {
   // //totalOrderAmount by order id
   public double getTotalOrderAmount(long orderId){
       for (Order order : this.orders) {
-        //System.out.println(order.getId() + " " + order.getTotalOrderAmount());
+        System.out.println(order.getId() + " " + order.totalAmount());
+        //1 30.9
+        //1 5.9
+        //1 9.0
+        //1 800_000
         if (order.getId() == orderId) {
           return order.totalAmount();
         }
@@ -93,9 +101,8 @@ public class Customer {
     // orders[2] = new Order();
     Item i1 = new Item(10000.0, 10, "Apple");
     i1.totalAmount();
-    System.out
-        .println(i1.getPrices() + "," + i1.getQuantity() + "," + i1.getName());
-    System.out.println(i1.totalAmount());
+    System.out.println(i1.getPrices() + "," + i1.getQuantity() + "," + i1.getName());//10_000.0,10,Apple
+    System.out.println(i1.totalAmount());//100_000.0
 
     // Item [] newItems = new Item [3];
 
@@ -110,29 +117,31 @@ public class Customer {
 
 
 
-    Customer c1 = new Customer(1L, null, false);
+    Customer c1 = new Customer(1L); // create customer object and then, write down the "address" into c1.
 
     Order o1 = new Order(1L);
     o1.addItem(new Item(5.4, 5, "ABC"));
     o1.addItem(new Item(1.3, 3, "DEF"));
-    c1.placeOrder(o1);
+    c1.placeOrder( o1);
+    
 
-    Order o2 = new Order(1L);
+    Order o2 = new Order(2L);
     o2.addItem(new Item(1.0, 2, "IJK"));
     o2.addItem(new Item(1.3, 3, "LLL"));
     c1.placeOrder(o2);
 
-    Order o3 = new Order(1L);
+    Order o3 = new Order(3L);
     o3.addItem(new Item(1.2, 2, "KKK"));
     o3.addItem(new Item(2.2, 3, "JJJ"));
     c1.placeOrder(o3);
 
-    Order o4 = new Order(1L);
+    Order o4 = new Order(4L);
     o4.addItem(new Item(400.0, 2000, "KKK"));
     c1.placeOrder(o4);
 
-    System.out.println(c1.orderSize());// 3
-    System.out.println(c1.getTotalOrderAmount(2L));// 3
+    System.out.println(c1.orderSize());// 4 -> total 4 order
+    System.out.println("hello");
+   System.out.println(c1.getTotalOrderAmount(2L));// 30.9
     System.out.println(c1.getTotalOrderAmount(3L));
     System.out.println(c1.getTotalOrderAmount(1L));
     System.out.println(c1.isVip());// false
@@ -152,8 +161,15 @@ public class Customer {
 //so, getOrders[0] -> Order
 //so, getOrder[0].getItem()[1] -> item
 //so, getOrder[0].getItem()[1].getPrice() -> double
+//--------------------------------------------------
 System.out.println(c1.getOrders()[0].getItem()[1].totalAmount()); //3.9(1.3*3)
+    //想要第一個Order入面嘅第二個Item嘅totalAmount
+    //所指 totalAmount 係Item嘅totalAmount
+    //so, c1.getOrders()[0].getItem()[1].totalAmount()
+    
+//--------------------------------------------------
 System.out.println(c1.getOrders()[0].totalAmount());//30.9(5.4*5 + 1.3*3)
+//--------------------------------------------------
 System.out.println(c1.getTotalOrderAmount(1));//30.9
 
   }

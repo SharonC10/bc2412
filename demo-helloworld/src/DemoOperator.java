@@ -57,14 +57,15 @@ public class DemoOperator{
      // whats different?
      int a = 8;
      int result1 = ++a + 3; //8 + 1 + 3 
-     System.out.println(result1); //12
+     System.out.println(result1);
+     System.out.println("a :" + a); //12
     //step: a become 9
     //step : a + 3 ( 9 + 3)
     //step assign 12 to result1
 
      int q = 8;
      int result2 = q++ + 3; // q + 3 first 8+3 = 11
-     System.out.println(result2);
+     System.out.println("result2:" + result2);
      System.out.println(q);//9
      // q +3  (8+3)
      // assign 11 to result2

@@ -47,7 +47,7 @@ public class DemoComparesion {
     
 
 
-    // || Or
+    // || Or (true || false) -> true
     boolean result3 = age2 >= 30 || gender2 == 'M';
     // event 1: age2 >= 30 -> true
     // event 2: gender2 == 'M' --> false 
@@ -56,7 +56,7 @@ public class DemoComparesion {
     System.out.println(result3); // true 7
 
 
-    // || or (false || false )
+    // || or (false || false ) -> false 
     int price2 = 100;
     char apple = 'a';
     boolean result5 = price2 <=99 || apple == 'b';
@@ -65,12 +65,17 @@ public class DemoComparesion {
 
 
 
-    // and or (true and (false or true))
+    // and or (true and (false or true)) -> true
+    //age2 = 30;
+    boolean result10 = age2 >= 30 && (gender2 == 'M' || age2 > 18);
+    System.out.println("result10:" + result10);
+
+    // true && (true || false )
     int age3 = 31;
     char isSmoker = 'N';
-    boolean result6 = (age3 >= 31 && isSmoker == 'N');
+    boolean result6 = age3 >=31 && (age3 < 31 || isSmoker == 'N');
     //9
-    System.out.println(result6);// true 9
+    System.out.println("result6:" + result6);// true 9
     // is >=31 and !isSmoker
     //Step1: age >= 31 -> true ; 
     //Step2: isSmoker 'no' --> true;
@@ -110,7 +115,9 @@ System.out.println(result9);
     
 
 
-
+ //CBCBDBDACA
+//CBDADBDACA
+ 
 
 
   }

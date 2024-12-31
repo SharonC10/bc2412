@@ -105,7 +105,7 @@ public class DemoString {
 
 
     // Empty String
-    String emptyString = "";
+    String emptyString = " ";
     System.out.println(emptyString.length());//0-------Q16
     boolean isStringEmpty = "".equals(emptyString);
     // asking if emptyString equals to ""
