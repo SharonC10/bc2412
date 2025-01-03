@@ -16,12 +16,17 @@ public class Deck {
     }
   }
 
-
+public Card [] getCards(){
+  return this.cards;
+}
 
 
   public static void main (String [] args){
-    Deck deck = new Deck();//52 cards
+    Deck deck1 = new Deck();//52 cards
     //Card.x = 10;//final x = 3;
+    for (Card card : deck1.getCards()) {
+      System.out.println(card.getRank() + " " + card.getSuite());
+    }
 
   }
 }

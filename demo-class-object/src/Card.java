@@ -15,20 +15,18 @@ public class Card {
 
 public static final int x = 3;
 //----------------------------------
-  private Card (char suite, char rank){
+  public Card (char suite, char rank){
     this.suite = suite;
     this.rank = rank;
   }
 
 //--------------------------------
-  private char getSuite(){
+  public char getSuite(){
    return this.suite;
   }
-  private char getRank(){
+  public char getRank(){
     return this.rank;
   }
 //----------------------------------
-  public static void main (String [] args){
-
-  }
+  
 }

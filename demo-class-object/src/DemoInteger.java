@@ -21,14 +21,14 @@ public class DemoInteger {
     System.out.println(System.identityHashCode(x8));//146589023
 
     //Same situations for Byte, Short, Long, Character, Boolean
-    Character c1 = 'a';//
-    Character c2 = 'a';
+    Character1 c1 = 'a';//
+    Character1 c2 = 'a';
     System.out.println(System.identityHashCode(c1));//344639057
     
     System.out.println(System.identityHashCode(c2));//44639057
     
-    Character c3 = '你';//
-    Character c4 = '你';
+    Character1 c3 = '你';//
+    Character1 c4 = '你';
     System.out.println(System.identityHashCode(c3));//1482968390
     System.out.println(System.identityHashCode(c4));//349885916
 

@@ -19,6 +19,10 @@ public class Library {
     return this.books;
   }
 
+  //-----setter? 
+  public void setBooks(){
+    this.books = books;
+  }
   // method signatures
   public void addBook(Book books) {
     Book[] newBooks = new Book[this.books.length + 1];
