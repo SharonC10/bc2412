@@ -3,7 +3,7 @@ public class Student2 {
   private int score;
   private Candy2 [] candies;
 
-  public Student2 (int score){
+  public Student2 (long  id, int score){
     this.score = score;
     this.candies = new Candy2[0];
     this.id = id;
@@ -13,15 +13,15 @@ public class Student2 {
     return this.score;
   }
 
-  public int getCandyCount(){
-    return this.candies.length;
+  public Candy2[] getCandies(){
+    return this.candies;
   }
   
   public long getId(){
     return this.id;
   }
 
-  public void receiveCandy(Candy2 candy){
+  public void receiveCandy(Candy2 candy){//like add candy
     //new array
     Candy2 [] candies = new Candy2 [this.candies.length +1 ];
     //for loop to copy
@@ -29,12 +29,39 @@ public class Student2 {
       candies[i] = this.candies[i];
     }
     //place candy at the tail
-    //repace the reference
-candies[candies.length - 1 ]= candy
+candies[candies.length - 1 ]= candy;
 //replace the reference
-this.candiies = candies;
+this.candies = candies;
   }
 
+  public int getCandyCount(){ //how many coandies
+    return this.candies.length;
+  }
+
+  public String getCandiesInfo(){
+    String info = "[";
+    for (Candy2 candy : this.candies){
+      info += candy.getColor() + ",";
+    }
+    return info.substring(0, info.length()-1) + "]";
+  }
+
+// Question 2:
+  // Candy.class has attribute color (RED, BLUE, YELLOW)
+  // Student2.class to store his own candies
+
+  // 20 candies -> distribute students according to their score
+  // Rule: Every round of distribution, Above 80 score -> RED; between 60 - 79 score -> BLUE, else
+  // YELLOW
+
+  // Student 1: 67 score
+  // Student 2: 89 score
+  // Student 3: 50 score
+  // Student 4: 99 score
+  // Student 5: 60 score
+  // Student 6: 59 score
+
+  // Expected output: Sysout Student[] (Student should have Candy attribute)
 
 
 

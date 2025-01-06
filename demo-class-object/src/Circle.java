@@ -46,12 +46,12 @@ public class Circle {
     public static void main (String [] args){
 
 //-------------------------------------------------
-      Circle c1 = new Circle(3.0);
+      Circle1 c1 = new Circle1(3.0);
       //Presentation
       System.out.println(c1.calculateArea());//~28.27
 
       //Formula
-      System.out.println(Circle.calculateArea2(3.0));//~28.27
+      System.out.println(Circle1.calculateArea2(3.0));//~28.27
 
 
 

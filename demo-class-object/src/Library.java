@@ -19,10 +19,11 @@ public class Library {
     return this.books;
   }
 
-  //-----setter? 
-  public void setBooks(){
+  // -----setter?
+  public void setBooks() {
     this.books = books;
   }
+
   // method signatures
   public void addBook(Book books) {
     Book[] newBooks = new Book[this.books.length + 1];
@@ -98,7 +99,7 @@ public class Library {
     }
     return books;
   }
-  //work! 
+  // work!
   // Vincent-----------search book-----------------------------
   // public Book [] searchByTitle (String title){//didn't change the value of this.books
   // int count = 0;
@@ -145,7 +146,7 @@ public class Library {
     Book removeBook = L1.removeByTitle("ABC");
     System.out.println(removeBook.getTitle() + " " + removeBook.getAuthor());
     // DEF Tom
-    //System.out.println(L1.size());
+    // System.out.println(L1.size());
     // 2
 
 

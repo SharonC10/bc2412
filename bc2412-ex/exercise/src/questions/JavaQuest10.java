@@ -15,14 +15,7 @@ public class JavaQuest10 {
   public static void main(String[] args) {
 
     int[] my_array = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
-    //int[9] - > int[3]
-    //int[3] ->4
-    // 4->5
-    // 5-> 6
-    //6->7
-    //7->8
-    //8->9
-    //int [9] = new value
+
     Scanner input = new Scanner(System.in);
 
     System.out.print("Input an index for inserting the value: ");
@@ -37,22 +30,16 @@ public class JavaQuest10 {
     //int[] my_array = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
 
     int temp = 0;
-    int min = Integer.MAX_VALUE;
     int [] newArr = new int [my_array.length];
-    for (int i=0; i< my_array.length -1; i++){
-
-      if ( my_array[i] > min ){
-        my_array[i + 1] = my_array[i];
-        my_array[indexPosition] = newValue;
-          }
-            //else if (my_array[i] == indexPosition){ 
-              //my_array[i] = newValue;
-          //}
-        //my_array[i+1] = my_array[i];
-        //temp = my_array[i];
-        //my_array[i] = newValue;
+    for (int i=0; i< my_array.length; i++){
+      if ( my_array[indexPosition] == my_array[i]){
+        temp = my_array[i];
+        my_array[i] = newValue;
+        my_array[i+1] = temp;
+        //my_array[i+2] =  my_array[i+1];
         //my_array[i+1] = temp;
-        //count++;
+        
+      }newArr[i] = my_array[i];
       }
     
 
