@@ -6,7 +6,7 @@ public class Triangle extends Shape {
   private double higth;
   private double length;
 
-  public Triangle (char color, double higth, double length){
+  public Triangle (Color color, double higth, double length){
     super(color);
     this.higth = higth;
     this.length = length;
@@ -19,7 +19,8 @@ public class Triangle extends Shape {
     return this.length;
   }
 
-  public double calculateAreaT(){
+  @Override
+  public double calculateArea(){
     return BigDecimal.valueOf(getLength())
     .multiply(BigDecimal.valueOf(getHigth()))
     .divide(BigDecimal.valueOf(2)).doubleValue();
@@ -52,11 +53,11 @@ public class Triangle extends Shape {
   }
 
   public static void main(String[] args) {
-    Triangle t1 = new Triangle('R',10, 50);
-    System.out.println(t1.calculateAreaT());
+    Triangle t1 = new Triangle(Color.RED,10, 50);
+    System.out.println(t1.calculateArea());
     System.out.println(t1);
 
-    Triangle t2 = new Triangle('R', 10, 50);
+    Triangle t2 = new Triangle(Color.RED, 10, 50);
     System.out.println(t1.equals(t2));//true
     System.out.println(t1.hashCode()); //78030897
     System.out.println(t2.hashCode()); //78030897

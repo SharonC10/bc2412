@@ -1,4 +1,4 @@
-public class Cat extends Animal { // extends Animal 傳承
+public class Cat extends Animal implements Walkable, Sleepable{ // extends Animal 傳承
     // Animal.class is a Parent Class ->
     // Cat is a Child class ->
     // Inherit all attribute from class
@@ -26,6 +26,7 @@ public class Cat extends Animal { // extends Animal 傳承
 
     // --------------------------
     // walk()
+    @Override
     public void walk() {
         System.out.println("Cat is walking...");
     }
@@ -35,12 +36,20 @@ public class Cat extends Animal { // extends Animal 傳承
         System.out.println("Cat is eating ...");
     }
 
-    public static void main(String[] args) {
-        Cat c1 = new Cat("abc", 8);
-        System.out.println(c1.getName());// abc
-        c1.walk(); // Cat itself method 
-        c1.eat(); // Animal is eating ...-> Cat is eating 
-        //Override Parent method implemetation 
+    @Override
+    public void sleep(){
+        System.out.println("cat is sleeping");
     }
+    
+    
+    
+    // public static void main(String[] args) {
+    //     Cat c1 = new Cat("abc", 8);
+    //     System.out.println(c1.getName());// abc
+    //     c1.walk(); // Cat itself method 
+    //     c1.eat(); // Animal is eating ...-> Cat is eating 
+    //     //Override Parent method implemetation 
+    //     c1.walkFaster();
+    // }
 
 }

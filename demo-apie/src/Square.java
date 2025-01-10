@@ -4,7 +4,7 @@ import java.util.Objects;
 public class Square extends Shape {
   private double length;
   
-  public Square (char color,double length ){
+  public Square (Color color,double length ){
     super(color);
     this.length = length;
   }
@@ -44,12 +44,12 @@ public class Square extends Shape {
     }
 
   public static void main(String[] args) {
-    Square s1 = new Square('Y' ,10.0);
+    Square s1 = new Square(Color.YELLOW ,10.0);
     s1.calculateArea();
     System.out.println(s1.calculateArea());
 
-    Square s2 = new Square ('Y', 10);
-    Square s3 = new Square ('R', 10.0);
+    Square s2 = new Square (Color.YELLOW, 10);
+    Square s3 = new Square (Color.RED, 10.0);
     System.out.println(s1.equals(s2));// true 
     System.out.println(s1.equals(s3));// false 
     System.out.println(s1.hashCode());//1076104840

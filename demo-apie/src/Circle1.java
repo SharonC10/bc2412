@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.security.cert.CertPathValidatorException.BasicReason;
 import java.util.Objects;
 // Why do need Shape? 
 public class Circle1 extends Shape{// Parent Class : color
@@ -8,7 +9,7 @@ public class Circle1 extends Shape{// Parent Class : color
 
   //If you don't specify the construtor implicitly you have an empty construtor 
   
-public Circle1 (char color, double radius){
+public Circle1 (Color color, double radius){
   //if you don't specify "super" here.... by default implicitly you are calling super()
   super(color);// because you have "extends", you have to "super"
   this.radius = radius;
@@ -28,6 +29,7 @@ public double calculateArea(){
   .multiply(BigDecimal.valueOf(Math.PI))
   .doubleValue();
 }
+
 
 @Override
 public boolean equals(Object obj){
@@ -56,11 +58,11 @@ public String toString(){
 public static void main(String[] args) {
   //new Circle(); after you specify a construcot , then the default 
   //construtor will be no longer exists
-  Circle1 c1 = new Circle1('B', 6.0);
+  Circle1 c1 = new Circle1(Color.BLUE, 6.0);
   System.out.println(c1.calculateArea());
 
-  Circle1 c2 = new Circle1('B', 6.0);
-  Circle1 c3 =new Circle1('R', 10);
+  Circle1 c2 = new Circle1(Color.BLUE, 6.0);
+  Circle1 c3 =new Circle1(Color.RED, 10);
   System.out.println(c1.equals(c2));//true
   System.out.println(c1.equals(c3));//false 
   System.out.println(c1.hashCode());//1075317695
