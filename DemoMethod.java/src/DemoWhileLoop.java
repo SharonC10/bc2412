@@ -56,7 +56,7 @@ public class DemoWhileLoop {
     System.out.println(markSix);
 
     int[] markSixArr = new int[6];
-    int count2 = 0;
+    int count2 = 0;//6 digi
     int value = 0;
     while (count2 < 6) {
       value = new Random().nextInt(49) + 1; // 49

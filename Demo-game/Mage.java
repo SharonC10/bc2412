@@ -1,11 +1,16 @@
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.Random;
 
 public class Mage extends Hero {
+  private int pa;
+
   
 public Mage (long id, int hp, int mp){
     super(id, hp, mp);
+    this.pa = 10;
   }
-  
+
   public int getMaxHP(){
     return Hero.getMaxHP(Role.MAGE, super.getLevel());
   }
@@ -15,6 +20,46 @@ public Mage (long id, int hp, int mp){
   public int getAg(){
     return Hero.getAg(Role.MAGE, getLevel()) ;
   }
+  public int getPa(){
+    return Hero.getPa(Role.MAGE, getLevel());
+  }
+  public int getPd(){
+    return Hero.getPd(Role.MAGE, getLevel());
+  }
+  public int getMa(){
+    return Hero.getMa(Role.MAGE, getLevel());
+  }
+  public int getMd(){
+    return Hero.getMd(Role.MAGE, getLevel());
+  }
+  //CC--------------------------------------------
+  public int cc = new Random().nextInt(5);
+  @Override
+  public int getCC(){
+    int [] ccArr = new int[0];
+    int count = 0;
+    int value = 0;
+    while (count < 5){
+      value = new Random().nextInt(5);
+      if (!isDuplicated(ccArr, value)) { //ccArr only hv one place , value = 0-8 random
+        ccArr[count] = value; // when arr [0] = value (random 0- 8) 
+      } System.out.println(Arrays.toString(ccArr));
+    }
+    return value;
+  } 
+
+  public static boolean isDuplicated(int[] arr, int newValue) { //define what is isDuplicated
+
+    boolean isDuplicated = false;
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == newValue)
+        return true;
+
+    }
+    return false;
+  }
+//CD-----------------------------------------------
+
 
   // @Override
   // public int ag(){

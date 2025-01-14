@@ -1,15 +1,15 @@
 public class Archer extends Hero{
-  private int speed; //can speed up! when lev.+ , arrowSpeed ++
+  //private int speed; //can speed up! when lev.+ , arrowSpeed ++
   
 
   public Archer (long id, int hp, int mp){
    super(id,hp,mp);
-    this.speed = speed;
+    //this.speed = speed;
   }
 
-  public int getSpeed(){
-    return this.speed;
-  }
+  // public int getSpeed(){
+  //   return this.speed;
+  // }
 
   public int getMaxHP(){
     return Hero.getMaxHP(Role.ARCHER, super.getLevel());

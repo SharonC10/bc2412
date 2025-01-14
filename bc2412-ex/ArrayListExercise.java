@@ -186,7 +186,7 @@ public class ArrayListExercise {
     stu.add(new Student(3,"Charlie"));
     System.out.println(stu.toString());
 
-    for (int i = 0; i<stu.size(); i++){
+    for (int i = 0; i<stu.size(); i++){//8c
       if (stu.get(i).equals("Bob")){
         stu.remove(i);
       }
@@ -200,13 +200,33 @@ public class ArrayListExercise {
     // Set 2: Bob (ID: 2), Charlie (ID: 3), David (ID: 4)
     // 9b. Find the common students of the two sets
     // 9c. Print the result.
-    HashSet <String> stu2 = new HashSet<>();
-    stu2.add("Alice");
-    stu2.add("Bob");
-    stu2.add("Charlie");
-    HashSet <Integer>stu3 = new HashSet<>();
+    HashSet <Student> set = new HashSet<>();
+    set.add(new Student(1, "Alice"));
+    set.add(new Student(2, "Bob"));
+    set.add(new Student(3, "Charlie"));
+    HashSet <Student> set2 = new HashSet<>();
+    set2.add(new Student(2, "Bob"));
+    set2.add(new Student(3, "Charlie"));
+    set2.add(new Student(4, "David"));
 
+    HashSet <Student> commonName = new HashSet<>();//9b
+    for (Student s : set){
+      for (Student s2 : set2){
+        if (s.equals(s2)){
+          commonName.add(s);
+        }
+      }
+    }System.out.println(commonName);
+  
+  
+  
+  
+  
+  
+  
+  
   }
+
 
   public static class Student {
     private int id;
@@ -248,6 +268,20 @@ public class ArrayListExercise {
     //   }
       
     // }
+
+    // public static String search(Student id){
+    //   String result = "";
+    //   result = ;
+    //   return result;
+    // }
+
+
+
+
+
+
+
+
     @Override
     public boolean equals(Object obj){
       if (this == obj)
@@ -270,5 +304,6 @@ public class ArrayListExercise {
       " Name: " + getName() +
       "]";
     }
+
   }
 }

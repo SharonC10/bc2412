@@ -1,9 +1,23 @@
 public abstract class Weapon {
   //expect use static mehtod
-  public static int getSword(){
-    return 100;
+  private int weaponLev;
+
+  public Weapon (int weaponLev){
+    this.weaponLev = 1;
+
   }
-  public static int getMagicStick(){
-    return 100;
+
+  public int getWeaponLev(){
+    return this.weaponLev;
   }
+  
+  // Weapon Level can be set...
+  public void setWeaponLev(){
+    this.weaponLev = weaponLev;
+  
+  }
+
+  //----------------equip() -> Role
+  public static int getAdd_Ap (Role role, )
+
 }
