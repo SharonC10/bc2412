@@ -35,6 +35,19 @@ public class DemoPQ {
           + "age=" + this.age //
           + "]";
     }
+  
+    public static class SortByElderly implements Comparator<DemoPQ.Person> {
+      //Early return
+      @Override
+      public int compare(DemoPQ.Person p1, DemoPQ.Person p2) {
+        if (p1.isElderly())
+          return -1;
+        if (p2.isElderly())
+          return 1;
+        return -1; //base return
+      }
+    }
+
   }
 
   public static void main(String[] args) {
@@ -59,7 +72,7 @@ public class DemoPQ {
     PriorityQueue<Person> pq2 = new PriorityQueue<>(new SortByAge());
    pq2.add(new Person("Vincent", 65));
    pq2.add(new Person("Lucas", 60));
-   pq2.add(new Person("Oscar", 10));
+   pq2.add(new Person("Oscar", 70));
    System.out.println(pq2.poll());
    System.out.println(pq2.poll()); 
    System.out.println(pq2.poll()); 

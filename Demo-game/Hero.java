@@ -112,13 +112,11 @@ public abstract class Hero {
   }
   // Method
   // presentation: isAlive -> boolean?(OK)
-  // Action : Level up --> +MaxHP, +MaxMP, +attackPower ,
-
+  // Action : Level up --> +MaxHP, +MaxMP, +attackPower 
 
   // Child class: Archer, Mage , Worrior
   // attackPower, (int ) -HP
   // Weapon
-  //
 
   // public static Warrior createWarrior (long id, int hp, int mp, int level,boolean superPunch, int maxHp, int maxMp){
   //   return new Warrior (id, hp,mp, level, superPunch, maxHp, maxMp);
@@ -155,7 +153,6 @@ public abstract class Hero {
   }
   
   //PA-------------------------------
-    
     public static final int [] ARC_PAPD_TAB ;
     public static final int [] WAR_PAPD_TAB;
     public static final int [] MAG_PAPD_TAB;
@@ -231,12 +228,9 @@ public abstract class Hero {
         break;
       }return -1;
     }
-
-    //CC------------------------------------- how often will the unit score a critical 
-    
-
     
     //CD------------------------------------- CD = CC * ROLE. PA
+    
     public static int getCD(Role role , int level){
       int cd = 0;
 
@@ -262,13 +256,5 @@ public abstract class Hero {
     // System.out.println(h1.totalAg());
     // System.out.println(m1.toString());
     }
-    // w1.calculateLev();
-    // System.out.println(w1.calculateLev());
-
-    
-  
-    //Warrior have superPunch.
-  
-    //when level 2 => maxHP +100, maxMP +50
   }
 
