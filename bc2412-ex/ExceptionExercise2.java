@@ -15,20 +15,21 @@ public class ExceptionExercise2 extends RuntimeException {
     System.out.print("Enter the index to retrieve: ");
 
     // code here ...
-
+    String idx = scanner.nextLine(); // read String
     try {
-      String idx = scanner.nextLine();
+
       int x = Integer.parseInt(idx); // String idx(number) -> int idx
-      int ans = numbers[Integer.parseInt(idx)];
-      System.out.println("Element at index:" + ans);
+      int ans = numbers[x];
+      System.out.println("Element at index:" + x  + ":" + ans);
     } catch (ArrayIndexOutOfBoundsException e) {
       // TODO: handle exception
       System.out.println("Error: Index is out of bounds.");
     } catch (NumberFormatException e) {
       // TODO: handle exception
       System.out.println("Error: Please enter a valid number.");
+    } finally {
+      System.out.println("Array retrieval attempt completed.");
     }
-    System.out.println("Array retrieval attempt completed.");
 
 
 

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class DemoArrayList {
  public static void main(String[] args) {
@@ -21,31 +22,50 @@ public class DemoArrayList {
     System.out.println(strings.size());//2
     System.out.println(strings.get(1));//IJK, jump to the elements with index 1 directly
     //System.out.println(strings.get(2));//NOT OK //java.lang.IndexOutOfBoundException
-    
+    try {
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("Input the index");
+      int number = scanner.nextInt() ;
+      System.out.println(strings.get(number));
+    } catch (IndexOutOfBoundsException e) {
+      // TODO: handle exception
+      System.out.println("ArrayList -> IndexOutOfBoundException.");
+    }
 
-    //Book[]
+
+
+    //Book[] 
     ArrayList<Book> books = new ArrayList<>();
     books.add(new Book ("ABC"));
     books.add(new Book("IJK"));
 
-    books.remove(0); // remove by index;
+    books.remove(0); // remove by index; 
     System.out.println(books.size());//1
     books.add(new Book("XYZ"));
     books.remove(new Book("IJK")); //after @Override equals() in Book.class
     //ArrayList.remove (Object obj)-> book.equals()
     //Generics Design ensure the Type must contains equals()
     System.out.println(books.size());//2  |1
+    System.out.println(books.toString());//[Book[name = XYZ]] 
+    //remove books[0], remove "IJK"
 
 books.contains(new Book ("XYZ"));
 //requires @Override equals
 System.out.println(books.contains(new Book ("XYZ")));//true
-books.indexOf(new Book ("XYZ"));//0
+books.indexOf(new Book ("XYZ"));//0 
 books.clear(); //Create a new array with size 0
+System.out.println("start");
 
 books.add(new Book ("ABCD"));
 System.out.println(books.add(new Book ("ABCD"))); //true
 
+System.out.println(books.get(0).equals(books.get(1))); // true
+
 books.isEmpty(); //false
+System.out.println(books.toString()); //[Book[name = ABCD], Book[name = ABCD]]
+//ArrayList vs Hashset
+//ArrayList can add same bookname 
+//Hashset will stop duplicate -> no way to add "ABCD"
 
 //search part of the title for book->"ABCD" for loop
 //for each-loop support ArrayList
@@ -64,7 +84,7 @@ ArrayList<Integer> index = new ArrayList<>();
 index.add(123);
 index.add(123);
 System.out.println(index.size());
-index.remove(123);
+index.remove(0);
 System.out.println(index.size());
 
 

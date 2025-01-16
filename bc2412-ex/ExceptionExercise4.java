@@ -23,8 +23,6 @@ public class ExceptionExercise4 extends RuntimeException{
       registerUser(username, password, email);
       System.out.println("User Registeration is Success.");
     } catch (UserRegistrationException e) {
-
-      // TODO: handle exception
       System.out.println("User Registeration is Fail.");
     }
     // call method registerUser(), handle the exception to print "User Registeration is Fail."
@@ -42,11 +40,11 @@ public class ExceptionExercise4 extends RuntimeException{
       String email) throws UserRegistrationException {
     try {
         validateUsername(username);
-        validateEmail(email);
+        validateEmail(email); //if email checking fail, throw and exit this method
         validatePassword(password);
-        System.out.println("User registered successfully:" + username);
-    } catch (IllegalArgumentException e) {
-      // TODO: handle exception
+        System.out.println("User registered successfully:" + username); //if all pass sysOut "User registered successfully"
+    } catch (IllegalArgumentException e) {//these maybe hv problems, so catch IllegalArgumentE 
+      //re-throw 綜合事件再說明 
       throw new UserRegistrationException();
 
     }
@@ -55,18 +53,17 @@ public class ExceptionExercise4 extends RuntimeException{
 
   // Throw IllegalArgumentException if String username is null or empty string
   private static void validateUsername(String username) {
-    if (username == null || username == "")
+    if (username == null || username.isEmpty())
       throw new IllegalArgumentException();
-    return;
   }
 
   // Throw IllegalArgumentException
   // if password is null or password length < 8 or it does not contain
   // any special characters of !@$&_
   private static void validatePassword(String password) {
-    if (password == null || password.length() < 8 || !password.contains("!")
-        || !password.contains("@") || !password.contains("$")
-        || !password.contains("&") || !password.contains("_"))
+    if (password == null || password.length() < 8 || (!password.contains("!") //次序都好重要
+        && !password.contains("@") && !password.contains("$")
+        && !password.contains("&") && !password.contains("_"))) //-> !@$&_  don't contain all of these
       throw new IllegalArgumentException();
   }
 

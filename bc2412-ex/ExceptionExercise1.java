@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExceptionExercise1 extends RuntimeException{
+public class ExceptionExercise1 extends RuntimeException {
   // Question: Write a program that divides two numbers provided by the user. Handle the
   // ArithmeticException when dividing by zero and display an appropriate message.
 
@@ -18,9 +18,10 @@ public class ExceptionExercise1 extends RuntimeException{
     try {
       int result = numerator / denominator;
       System.out.println("Result: " + result);
-    }catch (ArithmeticException e) {
+    } catch (ArithmeticException e) {
       System.out.println("Error: Cannot divide by zero.");
-  }
-    System.out.println("Division operation completed.");
+    } finally {
+      System.out.println("Division operation completed.");
+    }
   }
 }
