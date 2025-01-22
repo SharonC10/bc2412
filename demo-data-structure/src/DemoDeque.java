@@ -25,11 +25,11 @@ public class DemoDeque {
   
   Queue <String>ss3 = new ArrayDeque<>();
   
-    if (){
-      ss3 = new ArrayDeque<>();
-    }else {
-      ss3 = new LinkedList<>();
-    }
+    // if (){
+    //   ss3 = new ArrayDeque<>();
+    // }else {
+    //   ss3 = new LinkedList<>();
+    // }
 
     ss3.poll();//
     //different implementations -> performance according to scenario.

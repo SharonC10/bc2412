@@ -15,13 +15,13 @@ public class DemoArrayList {
 
 //Variable Length -> 你不用理array 嘅空間
 //Underline data strucutre -> array
-//
+
     ArrayList<String >strings = new ArrayList<>();
     strings.add("ABC");
     strings.add("IJK");
     System.out.println(strings.size());//2
     System.out.println(strings.get(1));//IJK, jump to the elements with index 1 directly
-    //System.out.println(strings.get(2));//NOT OK //java.lang.IndexOutOfBoundException
+    System.out.println(strings.get(2));//NOT OK //java.lang.IndexOutOfBoundException
     try {
       Scanner scanner = new Scanner(System.in);
       System.out.println("Input the index");

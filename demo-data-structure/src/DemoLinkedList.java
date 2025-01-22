@@ -11,10 +11,17 @@ public class DemoLinkedList {
   strings.add("DEF");
   strings.add("ABC");
   System.out.println(strings.size()); //3
-  strings.remove(0); 
-  System.out.println(strings);
+  System.out.println(strings);//[ABC, DEF, ABC]
+
+  strings.remove(0); //can remove by index -> underling is Array
+  System.out.println(strings);// [DEF, ABC]
+  System.out.println(strings.size()); //3
   strings.remove("ABC");
-  System.out.println(strings); //淨返DEF
+  //I found that if i don't use (remove by index, use the String to remove "ABC")
+  //eg. "ABC, DEF ,ABC" -> "DEF, ABC"
+  //it will only remove the first one , 
+  
+  System.out.println(strings); //淨返DEF [DEF]
   strings.add("Oscar");
   strings.add("Jenny");
   strings.remove(); //remove the head -> DEF have been removed// Only LinkedList have this method 
