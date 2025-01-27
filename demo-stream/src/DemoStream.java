@@ -186,7 +186,7 @@ public class DemoStream {
         for (Integer integer : Stream.of(100, 120, 300)
                 .collect(Collectors.toList())) {
             System.out.println(integer);
-            name = "ijk";
+            name2 = "ijk";
         }
 
         // Another way to reslove the Optional
@@ -205,7 +205,8 @@ public class DemoStream {
         Optional<String> os1 = Optional.of(name3);
 
         String name4 = null;
-        Optional<String> os2 = Optional.ofNullable(name4);
+        System.out.println("name4:");
+        Optional<String> os2 = Optional.ofNullable("name4:" + name4);
 
         Optional<String> os3 = Optional.empty();
         if (os3.isPresent()) {

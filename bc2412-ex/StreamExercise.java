@@ -45,13 +45,15 @@ public class StreamExercise {
     // List<Integer> max = numbers2.stream().sorted((e1, e2) -> e1 > e2 ? -1 : 1)//
     // .filter(e -> e >= 30)//
     // .collect(Collectors.toList());
+    // System.out.println(max);
+  
     Optional<Integer> box = numbers2.stream().max((e1, e2) -> e1 > e2 ? -1 : 1);
-    // int maxNum = Integer.MIN_VALUE;
-    // if (box.isPresent()){
-    // maxNum = box.get();
-    // }
+    int maxNum = Integer.MIN_VALUE;
+    if (box.isPresent()){
+    maxNum = box.get();
+    }
 
-    // System.out.println("The Max is " + maxNum);
+    System.out.println("The Max is " + maxNum);
 
     // // List<Integer> min = numbers2.stream().sorted()//
     // // .filter(e -> e <= 5).collect(Collectors.toList());
@@ -120,6 +122,7 @@ public class StreamExercise {
     // It is an immutable List Object
     // But why people use it?
     // easy to read , its like telling "i am not going change Student"
+
     List<Student> students =
         List.of(new Student("Alice", 85), new Student("Bob", 75));
     // students.set(0, new Student("Vincent", 90));//java.lang.UnsupportedOperationException.
@@ -169,6 +172,7 @@ public class StreamExercise {
 
 
     Map<Integer, List<Person>> personMap = persons.stream()//
+    
         .collect(Collectors.groupingBy(e -> e.getAge()));// {25=[Bob], 30=[Alice, Charlie]} Done!
     System.out.println(personMap);
 //{25=[Person(Name= Bob,Age= 25)], 30=[Person(Name= Alice,Age= 30), Person(Name= Charlie,Age= 30)]}
@@ -217,7 +221,8 @@ public class StreamExercise {
     .collect(Collectors.toList());
    
     System.out.println("result12: " + result12);
-    //[Person(Name= AliceAge= 30), Person(Name= BobAge= 30), Person(Name= CharlieAge= 30)]
+    //result12: [Person(Name= Alice,Age= 30), Person(Name= Bob,Age= 30), Person(Name= Charlie,Age= 30)]
+
     // -----------------------------------------------------------------------
     // 13. Mapping and Collecting to a Deque
     // Task: Given a list of words, map each word to its uppercase form and collect the result into a
@@ -225,15 +230,12 @@ public class StreamExercise {
 
    List<String> words3 = Arrays.asList("hello", "world", "java");
     // // Output: [HELLO, WORLD, JAVA] (Deque)
-   List <String > result13 = words3.stream()//
+    
+   Deque <String > result13 = words3.stream()//
    .map(e -> e.toUpperCase())//
-   .collect(Collectors.toList());//
+   .collect(Collectors.toCollection(() -> new ArrayDeque<>()));//
    System.out.println("result13: " + result13);//[HELLO, WORLD, JAVA]
   
-   //  Deque <String > dequeArray = result13.stream()
-  //  .collect(Collectors.);
-
-   //result13 = new ArrayDeque<>();
     // -----------------------------------------------------------------------
     // 14. Transforming and Collecting to an Array
     // Task: Given a list of integers, square each number and collect the result into an array.
@@ -258,10 +260,10 @@ public class StreamExercise {
     // Output: 22
     List <Product> products = Arrays.asList(new Product("Book", 10), new Product("Pen", 5),
     new Product("Notebook", 7));
-    double totalPrice = products.stream()
+    Integer totalPrice = products.stream()
                             .map(e -> e.getPrice()) 
                             .reduce(0, (a, b) -> a + b);
-  System.out.println("reduced: " + totalPrice); //22.0
+  System.out.println("reduced: " + totalPrice); //22
 
 
   //another method
@@ -336,8 +338,13 @@ public class StreamExercise {
         Arrays.asList("apple", "banana", "apple", "orange", "banana", "grape");
     // Output: [apple, banana, grape, orange]
 
-    //Set <String> newFruits = fruits.stream()//
-    //sort Acce code? a-z?
+    List <String> newFruits = fruits.stream()//
+    .distinct()
+    .sorted()
+    .collect(Collectors.toList());//
+   
+    System.out.println("newFruits: " + newFruits);
+    //newFruits: [apple, banana, grape, orange]
 
     // -----------------------------------------------------------------------
     // 20. Partitioning By
@@ -365,11 +372,13 @@ public class StreamExercise {
 
     List<String> languages = Arrays.asList("Java", "Python", "Rust", "R", "Go");
     // Output: "Java, Python, Rust, R, Go"
-  //   List <String> newLanguages = languages.stream()//
-  //   .map(e -> System.out.println(e))
-  //   .collect(Collectors.toList());//
-  // System.out.println("newLanguages" + newLanguages);
- 
+
+    String newLanguages = languages.stream()//
+    .collect(Collectors.joining(", "));//
+    
+  System.out.println("newLanguages: " + newLanguages);
+ //newLanguages: Java, Python, Rust, R, Go
+
     // -----------------------------------------------------------------------
     // 22. Find First and Any
     // Task: Given a list of integers, find the first number that is divisible by 3.
@@ -380,7 +389,7 @@ public class StreamExercise {
     Optional <Integer> result22 = ages.stream()//
     .filter( e -> e%3 ==0)//
     .findFirst();
-    //.collect(Collectors.toList());//[9, 12, 21]
+    
     System.out.println(result22); // Optional[9]
 
     // -----------------------------------------------------------------------
@@ -391,10 +400,10 @@ public class StreamExercise {
     // Output: [4, 5, 6, 7, 8]
     // limit(x)
     List <Integer> result23 = elements.stream()//
-    
-    .limit(3)
+    .skip(3)
+    .limit(5)
     .collect(Collectors.toList());
-    System.out.println(result23);
+    System.out.println("result23: " + result23); //[4, 5, 6, 7, 8]
 
     // -----------------------------------------------------------------------
     // 24. Peek
@@ -404,6 +413,19 @@ public class StreamExercise {
     List<Integer> amounts = Arrays.asList(1, 2, 3, 4);
     // Intermediate output: 2, 4, 6, 8
     // Final Output: [2, 4, 6, 8]
+    List <Integer> result24 = amounts.stream()//
+    .map(e -> e * 2)
+    .peek(e -> {
+      System.out.println("Intermediate output: " + e);
+    })
+    .collect(Collectors.toList());
+   
+    System.out.println(result24);
+    //Intermediate output: 2
+    // Intermediate output: 4
+    // Intermediate output: 6
+    // Intermediate output: 8
+    // [2, 4, 6, 8]
 
     // -----------------------------------------------------------------------
     // 25. Optional and Streams
@@ -413,14 +435,41 @@ public class StreamExercise {
     List<String> animals = Arrays.asList("cat", "tiger", "panda", "dog");
     // Output: Optional[tiger]
 
+    Optional<String> result25 =
+    Stream.of("cat", "tiger", "panda", "dog")
+    .filter(e -> e.length() >4) //
+    .findFirst(); 
+    System.out.println("result25: " + result25);
+    //result25: Optional[tiger]
+
+
+    
     List<String> animals2 = Arrays.asList("cat", "dog", "bird");
     // Output: Optional[null]
+
+    Optional<String> result25B =
+    Stream.of("cat", "dog", "bird")
+    .filter(e -> e.length() >4)
+    
+    .findFirst();
+
+    if (result25B.isPresent()){
+      System.out.println(result25B.get());
+    }else {
+      System.out.println("null");
+    }
+   
+    
     // -----------------------------------------------------------------------
     // 26. Custom Collector
     // Task: Create a custom collector that collects the elements of a stream and remove all duplicates
 
     List<Integer> duplicates = Arrays.asList(2, 1, 2, 3, 4, 3, 5, 5, 6);
     // Output: [1, 2, 3, 4, 5, 6] (Set)
+
+    Set <Integer> result26 = duplicates.stream()
+    .collect(Collectors.toSet());
+    System.out.println(result26);//[1, 2, 3, 4, 5, 6] Done!
 
     // -----------------------------------------------------------------------
     // 27. String Length Calculation
@@ -431,6 +480,16 @@ public class StreamExercise {
         Arrays.asList("stream", "filter", "map", "sorted", "collect");
     // Output: 28
     // aggregate function: max() , count(), min(), average(), sum()
+
+    long sum2 = keywords.stream()//
+    .map(e -> e.length())
+    .reduce(0, (a,b) -> a+b);
+    System.out.println(sum2); //output: 28 Done!
+
+
+
+
+
 
   }
 
