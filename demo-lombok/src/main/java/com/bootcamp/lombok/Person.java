@@ -19,17 +19,26 @@ import lombok.ToString;
 //3. Maven: download external (outside JDK) library from maven public
 //(i.e. lombok) 
 
-@Getter
-@Setter
+// How Lombok get it work?? What is Lombok??
+
+//Class level annotation
+@Getter // can be field level 
+@Setter // can be field level 
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode // what if extend??  (cat , animal )
 @Builder
 
+
 public class Person {
-private String name;
-private int age;
+   //only name have the Setter 
+@Setter private String name;
+// only age have getter 
+@Getter  
+@ToString.Exclude //no to String age 
+private int age; 
+//System.out.println(p1) -> Person (name =Peter)
 
 
 
@@ -40,17 +49,13 @@ public static void main(String[] args) {
   Person p2 = new Person("Tommy", 10);
   System.out.println(p2.getAge());
   System.out.println(p2.getName());
-
   System.out.println(p1);
 
   Person p3 = new Person("Tommy", 10);
-
   System.out.println(p2.equals(p3));
-
   System.out.println(p2.hashCode() == p3.hashCode());
 
   Person p4 = Person.builder().name("Tommy").age(10).build();
-
   System.out.println(p4);
 
 }

@@ -18,18 +18,22 @@ public class StockPriceTracker {
     // 1. Add the trade record to the hashMap
     // 2. Add the price to PQ
     // 3. Add the trade date to Deque
+    
+
     System.out.println("Recorded: " + date + " -> $" + price);
   }
 
   public double getLatestPrice() {
     // code here ...
     // Tips: use tradeDates & tradeRecords
+    
     return -1.0;
   }
 
   public double getHighestPrice() {
     // code here ...
     // Tips: use maxPricePQ
+
     return -1.0;
   }
 

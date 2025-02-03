@@ -147,7 +147,7 @@ public class ArrayListExercise {
         }
       }
     }
-    System.err.println(ans);
+    System.err.println("ans=" + ans);
 
     // Exercise 7: Convert HashSet to ArrayList
 
@@ -216,7 +216,7 @@ public class ArrayListExercise {
           commonName.add(s);
         }
       }
-    }System.out.println(commonName);
+    }System.out.println("commonName="+commonName);
   
   
   

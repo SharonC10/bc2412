@@ -372,6 +372,7 @@ public class StreamExercise {
 
     List<String> languages = Arrays.asList("Java", "Python", "Rust", "R", "Go");
     // Output: "Java, Python, Rust, R, Go"
+    //like concat
 
     String newLanguages = languages.stream()//
     .collect(Collectors.joining(", "));//
@@ -389,7 +390,7 @@ public class StreamExercise {
     Optional <Integer> result22 = ages.stream()//
     .filter( e -> e%3 ==0)//
     .findFirst();
-    
+    // orElase null? 
     System.out.println(result22); // Optional[9]
 
     // -----------------------------------------------------------------------
@@ -486,7 +487,7 @@ public class StreamExercise {
     .reduce(0, (a,b) -> a+b);
     System.out.println(sum2); //output: 28 Done!
 
-
+//mapToInt no integer -> Stream Integer
 
 
 

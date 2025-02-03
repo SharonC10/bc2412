@@ -23,7 +23,8 @@ public class DemoList {
     List<String> strings3 = Arrays.asList("ABC", "DEF", "IJK");
     // strings3.add("XYZ"); // java.lang.UnsupportedOperationException
     // strings3.remove("IJK"); // java.lang.UnsupportedOperationException
-    strings3.set(0, "OPQ");
+    strings3.set(0, "OPQ"); // "ABC" -> "OPQ"
+    System.out.println(strings3.get(0));
 
     // 3. List.of()
     // Able to read ONLY.
