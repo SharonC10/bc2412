@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.bootcamp.demo.StaffTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! - in com.bootcamp.demo.StaffTest
-testStaffEqual  Time elapsed: 0.003 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <com.bootcamp.demo.Staff@7bb58ca3> but was: <com.bootcamp.demo.Staff@c540f5a>
-	at com.bootcamp.demo.StaffTest.testStaffEqual(StaffTest.java:27)
-
-testStaffToString  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <Steven 30> but was: <com.bootcamp.demo.Staff@35083305>
-	at com.bootcamp.demo.StaffTest.testStaffToString(StaffTest.java:34)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.bootcamp.demo.StaffTest

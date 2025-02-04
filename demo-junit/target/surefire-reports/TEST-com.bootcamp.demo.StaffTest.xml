@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bootcamp.demo.StaffTest" time="0.012" tests="4" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bootcamp.demo.StaffTest" time="0.005" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/test-classes:/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/classes:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/manmansuet/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/manmansuet/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/manmansuet/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:"/>
+    <property name="java.class.path" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/test-classes:/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/classes:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/manmansuet/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/manmansuet/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/manmansuet/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:/Users/manmansuet/.m2/repository/org/mockito/mockito-junit-jupiter/5.5.0/mockito-junit-jupiter-5.5.0.jar:/Users/manmansuet/.m2/repository/org/mockito/mockito-core/5.5.0/mockito-core-5.5.0.jar:/Users/manmansuet/.m2/repository/net/bytebuddy/byte-buddy/1.14.6/byte-buddy-1.14.6.jar:/Users/manmansuet/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.6/byte-buddy-agent-1.14.6.jar:/Users/manmansuet/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
     <property name="java.vm.vendor" value="Azul Systems, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://www.azul.com/"/>
@@ -12,10 +12,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="HK"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/surefire/surefirebooter5085370660370169180.jar /Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/surefire 2025-02-03T17-51-49_904-jvmRun1 surefire621588230493809440tmp surefire_011971780824556384238tmp"/>
+    <property name="sun.java.command" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/surefire/surefirebooter10155593546965344725.jar /Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/surefire 2025-02-04T16-44-33_733-jvmRun1 surefire16549925866811716690tmp surefire_02775883177582499010tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/test-classes:/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/classes:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/manmansuet/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/manmansuet/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/manmansuet/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/test-classes:/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/classes:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/manmansuet/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/manmansuet/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/manmansuet/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/manmansuet/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/manmansuet/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:/Users/manmansuet/.m2/repository/org/mockito/mockito-junit-jupiter/5.5.0/mockito-junit-jupiter-5.5.0.jar:/Users/manmansuet/.m2/repository/org/mockito/mockito-core/5.5.0/mockito-core-5.5.0.jar:/Users/manmansuet/.m2/repository/net/bytebuddy/byte-buddy/1.14.6/byte-buddy-1.14.6.jar:/Users/manmansuet/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.6/byte-buddy-agent-1.14.6.jar:/Users/manmansuet/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/manmansuet"/>
     <property name="user.language" value="zh"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/surefire/surefirebooter5085370660370169180.jar"/>
+    <property name="surefire.real.class.path" value="/Users/manmansuet/Documents/bootcamp/bc2412/demo-junit/target/surefire/surefirebooter10155593546965344725.jar"/>
     <property name="user.script" value="Hant"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
@@ -57,16 +57,8 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testStaff_Constructor" classname="com.bootcamp.demo.StaffTest" time="0.005"/>
-  <testcase name="testStaffEqual" classname="com.bootcamp.demo.StaffTest" time="0.003">
-    <failure message="expected: &lt;com.bootcamp.demo.Staff@7bb58ca3&gt; but was: &lt;com.bootcamp.demo.Staff@c540f5a&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <com.bootcamp.demo.Staff@7bb58ca3> but was: <com.bootcamp.demo.Staff@c540f5a>
-	at com.bootcamp.demo.StaffTest.testStaffEqual(StaffTest.java:27)
-]]></failure>
-  </testcase>
-  <testcase name="testStaff_GetSet" classname="com.bootcamp.demo.StaffTest" time="0"/>
-  <testcase name="testStaffToString" classname="com.bootcamp.demo.StaffTest" time="0.001">
-    <failure message="expected: &lt;Steven 30&gt; but was: &lt;com.bootcamp.demo.Staff@35083305&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Steven 30> but was: <com.bootcamp.demo.Staff@35083305>
-	at com.bootcamp.demo.StaffTest.testStaffToString(StaffTest.java:34)
-]]></failure>
-  </testcase>
+  <testcase name="testStaff_Constructor" classname="com.bootcamp.demo.StaffTest" time="0"/>
+  <testcase name="testStaffEqual" classname="com.bootcamp.demo.StaffTest" time="0"/>
+  <testcase name="testStaff_GetterSetter" classname="com.bootcamp.demo.StaffTest" time="0"/>
+  <testcase name="testStaffToString" classname="com.bootcamp.demo.StaffTest" time="0.003"/>
 </testsuite>
